@@ -1,0 +1,418 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Guia de Instalação do Python &mdash; Curso Introdutório de Python | Grupy-Sanca</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+    <link rel="next" title="Hello World" href="hello_world.html" />
+    <link rel="prev" title="Sobre o grupy-sanca" href="sobre_grupy.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Curso Introdutório de Python
+          
+
+          
+            
+            <img src="_static/logo_small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introducao.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sobre_grupy.html">Sobre o grupy-sanca</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Guia de Instalação do Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#linux">Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#no-ubuntu-e-debian">No Ubuntu e Debian</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#no-archlinux">No ArchLinux</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mac-os-x">Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#ambientes-de-desenvolvimento">Ambientes de Desenvolvimento</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ambientes-graficos">Ambientes gráficos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#atom">ATOM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#idle">IDLE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pycharm">PyCharm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spyder">Spyder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visual-studio-code">Visual Studio Code</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#linha-de-comando">Linha de comando</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#python-shell">Python Shell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ipython">IPython</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hello_world.html">Hello World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculadora.html">Python como calculadora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variaveis.html">Variáveis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html"><cite>Strings</cite> (sequência de caracteres)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Lendo valores do teclado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listas.html">Listas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicionarios.html">Dicionários</a></li>
+<li class="toctree-l1"><a class="reference internal" href="condicionais.html">Condicionais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controle.html">Estruturas de controle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repeticao.html">Estruturas de repetição</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funcoes.html">Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercicios.html">Exercícios e Desafios!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribuidores.html">Contribuidores</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso Introdutório de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Guia de Instalação do Python</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/instalacao.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="guia-de-instalacao-do-python">
+<span id="intro-instalacao"></span><h1>Guia de Instalação do Python<a class="headerlink" href="#guia-de-instalacao-do-python" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="linux">
+<h2>Linux<a class="headerlink" href="#linux" title="Link permanente para este título">¶</a></h2>
+<p>Provavelmente você já tem o Python instalado e configurado. Para ter certeza
+que ele está instalado e descobrir qual versão, abra um terminal e execute o
+comando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python --version
+</pre></div>
+</div>
+<p>Se o resultado do comando for <cite>Python 3.6.5</cite> (ou alguma versão igual ou
+superior a <cite>3.5</cite>) o Python já está instalado corretamente.</p>
+<p>Caso o resultado do comando anterior tenha sido <cite>Python 2.7.13</cite> (ou qualquer
+versão do <cite>Python 2</cite>) tente rodar o seguinte comando, pois seu computador
+pode ter ambas versões <cite>2</cite> e <cite>3</cite> instaladas:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python3 --version
+</pre></div>
+</div>
+<p>Caso tenha aparecido a mensagem <code class="docutils literal notranslate"><span class="pre">bash:</span> <span class="pre">python:</span> <span class="pre">command</span> <span class="pre">not</span> <span class="pre">found</span></code>, você pode
+instalá-lo da seguinte maneira:</p>
+<div class="section" id="no-ubuntu-e-debian">
+<h3>No Ubuntu e Debian<a class="headerlink" href="#no-ubuntu-e-debian" title="Link permanente para este título">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt install python3
+</pre></div>
+</div>
+</div>
+<div class="section" id="no-archlinux">
+<h3>No ArchLinux<a class="headerlink" href="#no-archlinux" title="Link permanente para este título">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pacman -Sy python
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="mac-os-x">
+<h2>Mac OS X<a class="headerlink" href="#mac-os-x" title="Link permanente para este título">¶</a></h2>
+<p>Obtenha o instalador na sessão de downloads para <a class="reference external" href="https://www.python.org/downloads/">Mac OS X do Python</a>. Clique
+duas vezes no <code class="docutils literal notranslate"><span class="pre">Python.mpkg</span></code> para abrir o instalador.</p>
+<p>Para ter certeza que ele está instalado e descobrir qual versão, abra um
+terminal e execute o comando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python --version
+Python <span class="m">3</span>.6.5
+</pre></div>
+</div>
+</div>
+<div class="section" id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Link permanente para este título">¶</a></h2>
+<p>Obtenha o arquivo de instalação última versão compatível com a arquitetura do
+seu computador no <a class="reference external" href="https://www.python.org/downloads/">site oficial do Python</a>. O arquivo <cite>x86</cite> provavelmente
+funcionará para todos computadores.</p>
+<p>A seguir, execute o instalador e uma imagem similar a essa aparecerá:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/install1.png"><img alt="_images/install1.png" src="_images/install1.png" style="width: 80%;" /></a>
+</div>
+<p>Deve ser selecionada a opção <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Python</span> <span class="pre">3.6</span> <span class="pre">to</span> <span class="pre">PATH</span></code> e depois continuar a
+instalação até o fim.</p>
+</div>
+</div>
+<div class="section" id="ambientes-de-desenvolvimento">
+<h1>Ambientes de Desenvolvimento<a class="headerlink" href="#ambientes-de-desenvolvimento" title="Link permanente para este título">¶</a></h1>
+<p>Há diversos programas para desenvolvermos códigos, alguns são mais bonitinhos,
+outros são mais poderosos, alguns são mais simples, outros são mais amigáveis.
+Dê uma olhada nesta seção e escolha o que você achar mais interessante. Somente
+você pode responder à pergunta “Qual o melhor ambiente de desenvolvimento para
+<em>mim</em>?”</p>
+<p>IDE (<em>Integrated Development Environment</em> - Ambiente de Desenvolvimento Integrado, em português)
+é um editor de texto que possui ferramentas e recursos que facilitam a vida do programador.
+Entre as ferramentas e recursos, podemos citar:</p>
+<ul class="simple">
+<li><p>Identificar quais variáveis foram declaradas.</p></li>
+<li><p>Identificar erros no código.</p></li>
+<li><p>Personalizar o ambiente de trabalho.</p></li>
+<li><p>Ocultar parte do código para melhor visualização.</p></li>
+</ul>
+<div class="section" id="ambientes-graficos">
+<h2>Ambientes gráficos<a class="headerlink" href="#ambientes-graficos" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="atom">
+<h3>ATOM<a class="headerlink" href="#atom" title="Link permanente para este título">¶</a></h3>
+<p>O programa ATOM é um IDE <em>open-source</em> que apresenta diversos pacotes para personalizar.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/ide_Atom.png"><img alt="_images/ide_Atom.png" src="_images/ide_Atom.png" style="width: 80%;" /></a>
+</div>
+<p>No site oficial do <a class="reference external" href="https://atom.io">ATOM</a>, você encontrará um link para a Documentação do programa.
+Na documentação, é possível acessar o <a class="reference external" href="https://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-windows">manual</a> que mostrará passo a passo como instalar o programa (tanto para Windows como para Linux).</p>
+<p>Caso você tenha alguma dúvida, é aconselhável entrar na seção de <a class="reference external" href="https://discuss.atom.io/">discusão</a>. Nessa página, você encontrará respostas para diversas dúvidas, e possivelmente, para a sua.</p>
+</div>
+<div class="section" id="idle">
+<h3>IDLE<a class="headerlink" href="#idle" title="Link permanente para este título">¶</a></h3>
+<p>Para usuários Windows é recomendado utilizar o <cite>IDLE</cite>. Ele é composto pelo interpretador do Python e um editor de texto para criar programas, e já vem junto com o Python.
+Após seguir o <a class="reference internal" href="#intro-instalacao"><span class="std std-ref">Guia de Instalação do Python</span></a>, o menu inicial deve estar da seguinte
+forma:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/idle1.png"><img alt="_images/idle1.png" src="_images/idle1.png" style="width: 80%;" /></a>
+</div>
+<p>Ao abrir o <cite>IDLE (Python 3.X)</cite>, aparecerá uma janela como na
+imagem abaixo:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/idle2.png"><img alt="_images/idle2.png" src="_images/idle2.png" style="width: 80%;" /></a>
+</div>
+<p>No <cite>IDLE</cite> é possível digitar comandos para o interpretador do Python e, também,
+é possível criar e digitar em um arquivo. Para fazer isso, no menu clique em
+<cite>File</cite> -&gt; <cite>New File</cite> (Ou pressione as teclas <cite>Ctrl</cite> + <cite>N</cite> juntas)</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/idle3.png"><img alt="_images/idle3.png" src="_images/idle3.png" style="width: 80%;" /></a>
+</div>
+<p>Para rodar um programa, clique em <cite>Run</cite> -&gt; <cite>Run Module</cite> (Ou aperte a tecla <cite>F5</cite>)</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/idle4.png"><img alt="_images/idle4.png" src="_images/idle4.png" style="width: 80%;" /></a>
+</div>
+<p>Caso o arquivo ainda não tenha sido salvo, é necessário salvá-lo antes de
+executá-lo. Não esqueça de prefixar o nome do arquivo com <cite>.py</cite>
+(extensão do Python):</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/idle5.png"><img alt="_images/idle5.png" src="_images/idle5.png" style="width: 80%;" /></a>
+</div>
+<p>Após isso, o resultado da execução do código deve aparecer na janela anterior do <cite>IDLE</cite>:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/idle6.png"><img alt="_images/idle6.png" src="_images/idle6.png" style="width: 80%;" /></a>
+</div>
+</div>
+<div class="section" id="pycharm">
+<h3>PyCharm<a class="headerlink" href="#pycharm" title="Link permanente para este título">¶</a></h3>
+<p>Esta IDE é voltada especificamente para a linguagem Python. No <a class="reference external" href="https://www.jetbrains.com/pycharm/">site oficial</a> é possível encontrar orientações para realizar o download e instalação (Linux, Mac, Windows).</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/ide_pycharm.png"><img alt="_images/ide_pycharm.png" src="_images/ide_pycharm.png" style="width: 80%;" /></a>
+</div>
+<p>É desenvolvido pela empresa tcheca JetBrains. Fornece análise de código, um depurador gráfico, teste de unidade integrado, integração com sistemas de controle de versão, ambiente virtual e suporta o desenvolvimento da Web com o Django, bem como Data Science com o Anaconda (<a class="reference external" href="https://en.wikipedia.org/wiki/PyCharm">Wikipedia</a>).</p>
+</div>
+<div class="section" id="spyder">
+<h3>Spyder<a class="headerlink" href="#spyder" title="Link permanente para este título">¶</a></h3>
+<p>O Spyder é uma IDE perfeita para quem utiliza o Python para Ciência de Dados, especialmente porque vem incluso no <em>Anaconda</em>, um pacote de várias bibliotecas e ferramentas voltadas para essa área.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/ide_spyder.png"><img alt="_images/ide_spyder.png" src="_images/ide_spyder.png" style="width: 80%;" /></a>
+</div>
+<p>Ele possui uma interface simples, com uma tabela de variáveis para fácil inspeção dos valores de cada variável no programa durante sua depuração.</p>
+<p>A melhor forma de instalá-lo é pela instalação do <a class="reference external" href="https://www.anaconda.com/distribution/">Anaconda</a>. Novamente, recomenda-se utilizar essa forma de instalação apenas para quem deseja utilizar todos os pacotes inclusos no Anaconda, e não apenas o Spyder.</p>
+</div>
+<div class="section" id="visual-studio-code">
+<h3>Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Link permanente para este título">¶</a></h3>
+<p>O Visual Studio Code por si só é um editor de texto criado pela Microsoft que apresenta diversos pacotes para personalizá-lo da forma que você precisa.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/ide_vsc.png"><img alt="_images/ide_vsc.png" src="_images/ide_vsc.png" style="width: 80%;" /></a>
+</div>
+<p>No site oficial do <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a>, você encontrará um link para a Documentação do programa.</p>
+<p>Na documentação, é possível acessar o <a class="reference external" href="https://code.visualstudio.com/docs/languages/python">manual de Python</a> que mostra todos as funcionalidades que o programa possui relacionadas a Python.</p>
+<p>Para um passo-a-passo da instalação, você pode encontrar os detalhes de cada sistema operacional <a class="reference external" href="https://code.visualstudio.com/docs/setup/setup-overview">nesta página do manual</a>.</p>
+</div>
+</div>
+<div class="section" id="linha-de-comando">
+<h2>Linha de comando<a class="headerlink" href="#linha-de-comando" title="Link permanente para este título">¶</a></h2>
+<p>Existe também a possibilidade de trabalhar sem um ambiente gráfico, utilizando apenas a <em>interface de linha de comando</em>.</p>
+<div class="section" id="python-shell">
+<h3>Python Shell<a class="headerlink" href="#python-shell" title="Link permanente para este título">¶</a></h3>
+<p>Se você instalou corretamente o Python, você tem à sua disposição um interpretador interativo, popularmente conhecido como <em>o Shell do Python</em>.</p>
+<p>Se você utiliza Linux ou Mac, basta abrir um terminal e digitar <code class="docutils literal notranslate"><span class="pre">python</span></code>. Caso utilize Windows, deverá existir uma pasta no menu <em>iniciar</em> chamada <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3.7</span></code> (ou <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3.6</span></code>) que permite abrir o interpretador. Caso tenha sucesso, você deverá encontrar algo similar a esta imagem:</p>
+<div class="figure align-center">
+<img alt="_images/python_shell.png" src="_images/python_shell.png" />
+</div>
+<p>Para sair do Python, digite <code class="docutils literal notranslate"><span class="pre">quit()</span></code>. Isso encerra a seção interativa e te retorna ao terminal (ou fecha a tela preta, no caso do Windows).</p>
+<p>Note que, ao entrar no interpretador, a primeira linha começa com <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3.7.2</span></code>. Essa é a versão utilizada do Python. Neste curso utilizamos a versão <code class="docutils literal notranslate"><span class="pre">3.6</span></code> ou mais recente. Caso a versão que aparecer em seu interpretador seja <code class="docutils literal notranslate"><span class="pre">2.7.6</span></code>, encerre a seção e tente o comando <code class="docutils literal notranslate"><span class="pre">python3</span></code> para utilizar a versão <code class="docutils literal notranslate"><span class="pre">3</span></code> do Python.</p>
+</div>
+<div class="section" id="ipython">
+<h3>IPython<a class="headerlink" href="#ipython" title="Link permanente para este título">¶</a></h3>
+<p><a class="reference external" href="https://ipython.org">IPython</a> é um Shell alternativo para o Python, bem poderoso. E colorido também, ao contrário do <cite>shell</cite> nativo do Python.</p>
+<div class="figure align-center">
+<img alt="_images/ipython.png" src="_images/ipython.png" />
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="hello_world.html" class="btn btn-neutral float-right" title="Hello World" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sobre_grupy.html" class="btn btn-neutral float-left" title="Sobre o grupy-sanca" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2020, (CC BY-NC-SA 4.0) Grupy-Sanca
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

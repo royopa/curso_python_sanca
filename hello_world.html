@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Hello World &mdash; Curso Introdutório de Python | Grupy-Sanca</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+    <link rel="next" title="Python como calculadora" href="calculadora.html" />
+    <link rel="prev" title="Guia de Instalação do Python" href="instalacao.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Curso Introdutório de Python
+          
+
+          
+            
+            <img src="_static/logo_small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introducao.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sobre_grupy.html">Sobre o grupy-sanca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacao.html">Guia de Instalação do Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacao.html#ambientes-de-desenvolvimento">Ambientes de Desenvolvimento</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hello World</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#c">C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#java">Java</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pascal">Pascal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funcao-print">Função <code class="docutils literal notranslate"><span class="pre">print()</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#erros-comuns">Erros comuns</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="calculadora.html">Python como calculadora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variaveis.html">Variáveis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html"><cite>Strings</cite> (sequência de caracteres)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Lendo valores do teclado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listas.html">Listas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicionarios.html">Dicionários</a></li>
+<li class="toctree-l1"><a class="reference internal" href="condicionais.html">Condicionais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controle.html">Estruturas de controle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repeticao.html">Estruturas de repetição</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funcoes.html">Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercicios.html">Exercícios e Desafios!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribuidores.html">Contribuidores</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso Introdutório de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Hello World</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/hello_world.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hello-world">
+<h1>Hello World<a class="headerlink" href="#hello-world" title="Link permanente para este título">¶</a></h1>
+<p>É muito comum, ao apresentar uma nova linguagem, começar com um exemplo simples que mostra
+na tela as palavras <cite>Hello World</cite>. Para não perder o costume, antes de adentrar
+o mundo do Python, vamos ver como outras linguagens de programação implementam
+esse exemplo:</p>
+<div class="section" id="c">
+<h2>C<a class="headerlink" href="#c" title="Link permanente para este título">¶</a></h2>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[]){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello, World!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="java">
+<h2>Java<a class="headerlink" href="#java" title="Link permanente para este título">¶</a></h2>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Hello</span> <span class="p">{</span>
+      <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">);</span>
+      <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>É obrigatório que o código acima esteja em um arquivo chamado <cite>Hello.java</cite></p>
+</div>
+<div class="section" id="pascal">
+<h2>Pascal<a class="headerlink" href="#pascal" title="Link permanente para este título">¶</a></h2>
+<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="k">program</span> <span class="n">HelloWorld</span><span class="o">;</span>
+
+<span class="k">begin</span>
+    <span class="nb">writeln</span><span class="p">(</span><span class="s">&#39;Hello, World!&#39;</span><span class="p">)</span><span class="o">;</span>
+<span class="k">end</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Link permanente para este título">¶</a></h2>
+<p>Vamos ver como é o <em>Hello World</em> em Python. Para isso, abra o <cite>shell</cite> do
+Python e digite o texto abaixo (não esqueça de apertar <cite>enter</cite> no final):</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+<span class="go">Hello, World!</span>
+</pre></div>
+</div>
+<p>Em programação, é muito comum utilizar a palavra <cite>imprimir</cite> (ou <cite>print</cite>, em
+inglês) como sinônimo de mostrar algo na tela.</p>
+</div>
+<div class="section" id="funcao-print">
+<h2>Função <code class="docutils literal notranslate"><span class="pre">print()</span></code><a class="headerlink" href="#funcao-print" title="Link permanente para este título">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">print()</span></code> é uma função nativa do Python. Basta colocar algo dentro dos
+parênteses que o Python se encarrega de fazer a magia de escrever na tela :)</p>
+<div class="section" id="erros-comuns">
+<h3>Erros comuns<a class="headerlink" href="#erros-comuns" title="Link permanente para este título">¶</a></h3>
+<p>Usar a letra <cite>P</cite> maiúscula ao invés de minúscula:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">NameError</span>: <span class="n">name &#39;Print&#39; is not defined</span>
+</pre></div>
+</div>
+<p>Esquecer de abrir e fechar aspas no texto que é passado para a função
+<code class="docutils literal notranslate"><span class="pre">print()</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; print<span class="o">(</span>Hello, World!<span class="o">)</span>
+Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+    ...
+SyntaxError: invalid syntax
+</pre></div>
+</div>
+<p>Esquecer de abrir ou fechar as aspas:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!)</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">SyntaxError</span>: <span class="n">EOL while scanning string literal</span>
+</pre></div>
+</div>
+<p>Começar com aspas simples e terminar com aspas duplas ou vice-versa:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, World!&quot;)</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">SyntaxError</span>: <span class="n">EOL while scanning string literal</span>
+</pre></div>
+</div>
+<p>Usar espaço ou tabulação (<code class="docutils literal notranslate"><span class="pre">tab</span></code>) antes do <code class="docutils literal notranslate"><span class="pre">print()</span></code>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, World!&#39;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">IndentationError</span>: <span class="n">unexpected indent</span>
+
+<span class="gp">&gt;&gt;&gt; </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, World!&#39;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">IndentationError</span>: <span class="n">unexpected indent</span>
+</pre></div>
+</div>
+<p>Mas, e se eu precisar usar aspas dentro do texto a ser mostrado na tela? Bem, Caso queira imprimir
+aspas duplas, envolva tudo com aspas simples e use aspas duplas na parte desejada:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Python é legal! Mas não o &quot;legal&quot; como dizem pra outras coisas&#39;</span><span class="p">)</span>
+<span class="go">Python é legal! Mas não o &quot;legal&quot; como dizem pra outras coisas</span>
+</pre></div>
+</div>
+<p>Caso deseje imprimir aspas simples, faça o contrário (envolva com aspas duplas e use aspas simples onde necessário):</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Python é legal! Mas não o &#39;legal&#39; como dizem pra outras coisas&quot;</span><span class="p">)</span>
+<span class="go">Python é legal! Mas não o &#39;legal&#39; como dizem pra outras coisas</span>
+</pre></div>
+</div>
+<p>E como faz para imprimir um texto em várias linhas? Bom, para isso precisamos
+lembrar de um caractere especial, a <em>quebra de linha</em>: <cite>n</cite>. Esse <cite>n</cite> é um
+caractere especial que significa <em>aqui acaba a linha, o que vier depois deve
+ficar na linha de baixo</em>. Por exemplo:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Olha esse textão sobre aspas simples e dúplas.</span><span class="se">\n</span><span class="s1">Isso aqui é aspas duplas: &quot;</span><span class="se">\n</span><span class="s1">Isso aqui é aspas simples: </span><span class="se">\&#39;</span><span class="s1">&#39;</span>
+<span class="go">Olha esse textão sobre aspas simples e dúplas.</span>
+<span class="go">Isso aqui é aspas duplas: &quot;</span>
+<span class="go">Isso aqui é aspas simples: &#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="calculadora.html" class="btn btn-neutral float-right" title="Python como calculadora" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="instalacao.html" class="btn btn-neutral float-left" title="Guia de Instalação do Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2020, (CC BY-NC-SA 4.0) Grupy-Sanca
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

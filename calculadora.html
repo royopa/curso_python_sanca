@@ -1,0 +1,592 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python como calculadora &mdash; Curso Introdutório de Python | Grupy-Sanca</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+    <link rel="next" title="Variáveis" href="variaveis.html" />
+    <link rel="prev" title="Hello World" href="hello_world.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Curso Introdutório de Python
+          
+
+          
+            
+            <img src="_static/logo_small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introducao.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sobre_grupy.html">Sobre o grupy-sanca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacao.html">Guia de Instalação do Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacao.html#ambientes-de-desenvolvimento">Ambientes de Desenvolvimento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hello_world.html">Hello World</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python como calculadora</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#operadores-matematicos">Operadores matemáticos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercicios">Exercícios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#expressoes-numericas">Expressões Numéricas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notacao-cientifica">Notação Científica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pontos-flutuantes">Pontos Flutuantes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Exercícios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sobre-comentarios">Sobre Comentários</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comparacoes">Comparações</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="variaveis.html">Variáveis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html"><cite>Strings</cite> (sequência de caracteres)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Lendo valores do teclado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listas.html">Listas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicionarios.html">Dicionários</a></li>
+<li class="toctree-l1"><a class="reference internal" href="condicionais.html">Condicionais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controle.html">Estruturas de controle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repeticao.html">Estruturas de repetição</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funcoes.html">Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercicios.html">Exercícios e Desafios!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribuidores.html">Contribuidores</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso Introdutório de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Python como calculadora</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/calculadora.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-como-calculadora">
+<h1>Python como calculadora<a class="headerlink" href="#python-como-calculadora" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="operadores-matematicos">
+<h2>Operadores matemáticos<a class="headerlink" href="#operadores-matematicos" title="Link permanente para este título">¶</a></h2>
+<p>A linguagem Python possui operadores que utilizam símbolos especiais para representar
+operações de cálculos, assim como na matemática:</p>
+<ul>
+<li><p>Soma (<span class="math notranslate nohighlight">\(+\)</span>)</p>
+<blockquote>
+<div><div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<p>Para utilizar números decimais, use o <em>ponto</em> no lugar de vírgula:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mf">3.2</span> <span class="o">+</span> <span class="mf">2.7</span>
+<span class="go">5.9</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Subtração (<span class="math notranslate nohighlight">\(-\)</span>)</p>
+<blockquote>
+<div><div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">6</span> <span class="o">-</span> <span class="mi">4</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">7</span> <span class="o">-</span> <span class="mi">8</span>
+<span class="go">-1</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Multiplicação (<span class="math notranslate nohighlight">\(*\)</span>)</p>
+<blockquote>
+<div><div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">7</span> <span class="o">*</span> <span class="mi">8</span>
+<span class="go">56</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="go">8</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Divisão (<span class="math notranslate nohighlight">\(/\)</span>)</p>
+<blockquote>
+<div><div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">100</span> <span class="o">/</span> <span class="mi">20</span>
+<span class="go">5.0</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">/</span> <span class="mi">3</span>
+<span class="go">3.3333333333333335</span>
+</pre></div>
+</div>
+<p>E se fizermos uma divisão por zero?</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">/</span> <span class="mi">0</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">ZeroDivisionError</span>: <span class="n">division by zero</span>
+</pre></div>
+</div>
+<p>Como não existe um resultado para a divisão pelo número zero, o Python
+interrompe a execução do programa (no caso a divisão) e mostra o erro que
+aconteceu, ou seja, <cite>“ZeroDivisionError: divison by zero”</cite>.</p>
+</div></blockquote>
+</li>
+<li><p>Divisão inteira (<span class="math notranslate nohighlight">\(//\)</span>)</p>
+<blockquote>
+<div><div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">//</span> <span class="mi">3</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">666</span> <span class="o">//</span> <span class="mi">137</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">666</span> <span class="o">/</span> <span class="mi">137</span>
+<span class="go">4.861313868613139</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Resto da divisão (<span class="math notranslate nohighlight">\(\%\)</span>)</p>
+<blockquote>
+<div><div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">%</span> <span class="mi">2</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">666</span> <span class="o">%</span> <span class="mi">137</span>
+<span class="go">118</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p>Agora que aprendemos os operadores aritméticos básicos podemos seguir
+adiante. Como podemos calcular <span class="math notranslate nohighlight">\(2^{10}\)</span>? O jeito mais óbvio seria
+multiplicar o número dois dez vezes:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="go">1024</span>
+</pre></div>
+</div>
+<p>Porém, isso não é muito prático, pois há um operador específico para isso, chamado de <em>potenciação/exponenciação</em>: <span class="math notranslate nohighlight">\(**\)</span></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">**</span> <span class="mi">10</span>
+<span class="go">1024</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">**</span> <span class="mi">3</span>
+<span class="go">1000</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="mi">800</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">**</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">*</span> <span class="mi">233</span>
+<span class="go">407254001651377825050774086265365912933271559572398924650169906751889900030955189004916347478470698880616885512201849445183728845558993514870858509087817789576388584560964682795896403435448681980001360244790530805842737419978616650940647045809688543958807077794866143976192872389017280782837244051514550016751431331392474612723898201318251801288569103581859710953756463227568553903785400053293756105145991925711692828410365978814157929143646138367222515290495329841814490874087309733954914817582614165290441834984054374534909954119315442169415884429645515258867781282214407424938115130906555866837546110340314133204645184212592152733050063403478054121909337278892530383627259086060904403894148963384111173869448637825223750221720739904084905206403076141255284819817001128530851921214720479861908207168928806625713775441834487646542035428141369478170696522098960677314242891140325390964310295889079588950798788612324634050495786532200848059999839607732520233</span>
+</pre></div>
+</div>
+<p>E a <em>raiz quadrada</em>?</p>
+<p>Lembrando que <span class="math notranslate nohighlight">\(\sqrt{x} = x^\frac{1}{2}\)</span>, então podemos calcular a raiz
+quadrada do seguinte modo:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">**</span> <span class="mf">0.5</span>
+<span class="go">2.0</span>
+</pre></div>
+</div>
+<p>Mas a maneira recomendada para fazer isso é usar a função <code class="docutils literal notranslate"><span class="pre">sqrt()</span></code> da
+biblioteca <code class="docutils literal notranslate"><span class="pre">math</span></code>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">math</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+<span class="go">4.0</span>
+</pre></div>
+</div>
+<p>Na primeira linha do exemplo importamos, da biblioteca padrão do Python, o
+módulo <code class="docutils literal notranslate"><span class="pre">math</span></code> e então usamos a sua função <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> para calcular
+<span class="math notranslate nohighlight">\(\sqrt{16}\)</span></p>
+<p>E se precisarmos utilizar o número <span class="math notranslate nohighlight">\(\pi\)</span>?</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+<span class="go">3.141592653589793</span>
+</pre></div>
+</div>
+<p>Não esqueça que é preciso ter executado <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">math</span></code> antes de usar as funções
+e constantes dessa biblioteca.</p>
+</div>
+<div class="section" id="exercicios">
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Calcule o resto da divisão de 10 por 3.</p></li>
+<li><p>Calcule a tabuada do 13.</p></li>
+<li><p>Davinir não gosta de ir às aulas. Mas ele é obrigado a comparecer a pelo
+menos 75% delas. Ele quer saber quantas aulas pode faltar, sabendo que tem
+duas aulas por semana, durante quatro meses. Ajude o Davinir!</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Um mês tem quatro semanas.</p>
+</div>
+</li>
+<li><p>Calcule a área de um círculo de raio <span class="math notranslate nohighlight">\(r = 2\)</span>.</p>
+<p>Lembrete: a área de um círculo de raio <span class="math notranslate nohighlight">\(r\)</span> é:</p>
+<div class="math notranslate nohighlight">
+\[A_\circ = \pi \, r^2\]</div>
+</li>
+</ol>
+</div>
+<div class="section" id="expressoes-numericas">
+<h2>Expressões Numéricas<a class="headerlink" href="#expressoes-numericas" title="Link permanente para este título">¶</a></h2>
+<p>Agora que já aprendemos diversos operadores, podemos combiná-los e resolver
+problemas mais complexos:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="go">11</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">7</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">6</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="go">9</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="go">14</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">8</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">8.0</span>
+</pre></div>
+</div>
+<p>Quando mais de um operador aparece em uma expressão, a ordem de avaliação
+depende das regras de precedência.</p>
+<p>O Python segue as mesmas regras de precedência da matemática.
+O acrônimo <strong>PEMDAS</strong> ajuda a lembrar essa ordem:</p>
+<ol class="arabic simple">
+<li><p><strong>P</strong>arênteses</p></li>
+<li><p><strong>E</strong>xponenciação</p></li>
+<li><p><strong>M</strong>ultiplicação e <strong>D</strong>ivisão (mesma precedência)</p></li>
+<li><p><strong>A</strong>dição e <strong>S</strong>ubtração (mesma precedência)</p></li>
+</ol>
+</div>
+<div class="section" id="notacao-cientifica">
+<h2>Notação Científica<a class="headerlink" href="#notacao-cientifica" title="Link permanente para este título">¶</a></h2>
+<p>Notação científica em Python usa a letra <code class="docutils literal notranslate"><span class="pre">e</span></code> como sendo a
+potência de 10:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mf">10e6</span>
+<span class="go">10000000.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mf">1e6</span>
+<span class="go">1000000.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mf">1e-5</span>
+<span class="go">1e-05</span>
+</pre></div>
+</div>
+<p>Também pode ser usada a letra <code class="docutils literal notranslate"><span class="pre">E</span></code> maiúscula:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mf">1E6</span>
+<span class="go">1000000.0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pontos-flutuantes">
+<h2>Pontos Flutuantes<a class="headerlink" href="#pontos-flutuantes" title="Link permanente para este título">¶</a></h2>
+<p>Uma consideração importante sobre pontos flutuantes (números decimais). Por exemplo:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mf">0.1</span>
+<span class="go">0.1</span>
+</pre></div>
+</div>
+<p>É importante perceber que este valor, em um sentido real na máquina, não é exatamente 1/10. Está arredondando a exibição do valor real da máquina.</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">format</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="s1">&#39;.50f&#39;</span><span class="p">)</span>
+<span class="go">&#39;0.10000000000000000555111512312578270211815834045410&#39;</span>
+</pre></div>
+</div>
+<p>Veja que somente após a 18ª casa que há diferença. Isso é mais dígitos do que a maioria das pessoas acham úteis, então o Python mantém o número de dígitos gerenciáveis exibindo um valor arredondado</p>
+<p>Este fato se torna aparente assim que você tenta fazer aritmética com esses valores</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
+<span class="go">0.30000000000000004</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="mf">0.7</span> <span class="o">-</span> <span class="mf">0.2</span>
+<span class="go">0.49999999999999994</span>
+</pre></div>
+</div>
+<p>Note que isso é da mesma natureza do ponto flutuante binário, não é um bug no Python e muito menos um bug no seu código. Você verá o mesmo tipo de coisa em todos os idiomas que suportam a aritmética de ponto flutuante de seu hardware (embora alguns idiomas possam não exibir a diferença por padrão ou em todos os modos de saída).</p>
+<p>Os erros de representação referem-se ao fato de que a maioria das frações decimais não podem ser representadas exatamente como frações binárias (base 2). Essa é a principal razão pela qual o Python (ou Perl, C, C++, Java, Fortran e muitos outros) geralmente não exibe o número decimal exato que é esperado.</p>
+<p>O valor de 1/10 não é exatamente representável como uma fração binária. Quase todas as máquinas atualmente (considerando após novembro de 2000) usam aritmética de ponto flutuante <a class="reference external" href="https://pt.wikipedia.org/wiki/IEEE_754">IEEE-754</a>, e quase todas as plataformas mapeiam pontos flutuantes do Python para a <cite>“dupla precisão”</cite> IEEE-754, que contêm 53 bits de precisão. Portanto, na entrada, o computador se esforça para converter 0.1 na fração mais próxima possível da forma <code class="docutils literal notranslate"><span class="pre">J/2</span> <span class="pre">**</span> <span class="pre">N</span></code>, onde <code class="docutils literal notranslate"><span class="pre">J</span></code> é um inteiro contendo exatamente 53 bits.</p>
+</div>
+<div class="section" id="id1">
+<h2>Exercícios<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Quantos segundos há em 3 horas, 23 minutos e 17 segundos?</p></li>
+<li><p>Se você correr 65 quilômetros em 3 horas, 23 minutos e 17 segundos, qual
+é a sua velocidade média em m/s?</p></li>
+<li><p>Resolva essa expressão:</p>
+<div class="math notranslate nohighlight">
+\[\frac{100 - 413 \cdot (20 - 5 \times 4)}{5}\]</div>
+</li>
+<li><p>Enivaldo quer ligar três capacitores, de valores:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(C_1 = 10  \, \mu F\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(C_2 = 22  \, \mu F\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(C_3 =  6.8\, \mu F\)</span></p></li>
+</ul>
+<p>Se ele ligar os três em paralelo, a capacitância resultante é a soma:</p>
+<div class="math notranslate nohighlight">
+\[C_p = C_1 + C_2 + C_3\]</div>
+<p>Se ele ligar os três em série, a capacitância resultante é:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{C_s} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3}\]</div>
+<p>Ou seja:</p>
+<div class="math notranslate nohighlight">
+\[C_s = \frac{1}{\frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3}}\]</div>
+<p>Qual é o valor resultante em cada um desses casos?</p>
+</li>
+<li><p>Você e os outros integrantes da sua república (Joca, Moacir, Demival e
+Jackson) foram no supermercado e compraram alguns itens:</p>
+<ul class="simple">
+<li><p>75 latas de cerveja: R$ 2,20 cada (da ruim ainda, pra fazer o dinheiro render)</p></li>
+<li><p>2 pacotes de macarrão: R$ 8,73 cada</p></li>
+<li><p>1 pacote de Molho de tomate: R$ 3,45</p></li>
+<li><p>420g Cebola: R$ 5,40/kg</p></li>
+<li><p>250g de Alho: R$ 30/kg</p></li>
+<li><p>450g de pães franceses: R$ 25/kg</p></li>
+</ul>
+<p>Calcule quanto ficou para cada um.</p>
+</li>
+<li><p>Krissia gosta de bolinhas de queijo. Ela quer saber quantas bolinhas de
+queijo dá para colocar dentro de um pote de sorvete de <span class="math notranslate nohighlight">\(2\, L\)</span>. Ela
+pensou assim:</p>
+<blockquote>
+<div><p><em>Um pote de sorvete tem dimensões 15 cm x 10 cm x 13 cm.
+Uma bolinha de queijo é uma esfera de raio r = 1.2 cm.
+O fator de empacotamento ideal é 0.74, mas o pote de sorvete tem
+tamanho comparável às bolinhas de queijo, aí tem efeitos de borda, então
+o fator deve ser menor. Mas as bolinhas de queijo são razoavelmente
+elásticas, então empacota mais. Esse valor parece razoável.</em></p>
+</div></blockquote>
+<p>Sabendo que o volume de uma esfera de raio <span class="math notranslate nohighlight">\(r\)</span> é
+<span class="math notranslate nohighlight">\(V = \frac{4}{3} \pi r^3\)</span>, o volume do pote de sorvete é
+<span class="math notranslate nohighlight">\(V = x \cdot y \cdot z\)</span> e o fator de empacotamento é a fração de volume
+ocupado pelas bolinhas de queijo. Ou seja, <span class="math notranslate nohighlight">\(74 \%\)</span> do pote de sorvete
+vai ser ocupado pelas bolinhas de queijo.</p>
+<p>Ajude a Krissia descobrir quantas bolinhas de queijo cabem no pote de sorvete!</p>
+</li>
+</ol>
+</div>
+<div class="section" id="sobre-comentarios">
+<h2>Sobre Comentários<a class="headerlink" href="#sobre-comentarios" title="Link permanente para este título">¶</a></h2>
+<p>Caso precise explicar alguma coisa feita no código, é possível escrever um texto
+(que não será executado), que ajuda a entender ou lembrar o que foi feito.
+Esse texto é chamado de comentário, e para escrever um basta utilizar o
+caractere <code class="docutils literal notranslate"><span class="pre">#</span></code>. Exemplo:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span>  <span class="c1"># será lido apenas o cálculo, do # para frente o interpretador do Python irá ignorar!</span>
+<span class="go">7</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Aqui vai um código só com comentários! Posso falar o que quiser que não será interpretado, lalala, la-le-li-lo-lu. A job we hate to buy things we don&#39;t need.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="comparacoes">
+<h2>Comparações<a class="headerlink" href="#comparacoes" title="Link permanente para este título">¶</a></h2>
+<p>Os operadores de comparação em Python são:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operação</p></th>
+<th class="head"><p>Significado</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&lt;</p></td>
+<td><p>menor que</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;=</p></td>
+<td><p>menor igual que</p></td>
+</tr>
+<tr class="row-even"><td><p>&gt;</p></td>
+<td><p>maior que</p></td>
+</tr>
+<tr class="row-odd"><td><p>&gt;=</p></td>
+<td><p>maior igual que</p></td>
+</tr>
+<tr class="row-even"><td><p>==</p></td>
+<td><p>igual</p></td>
+</tr>
+<tr class="row-odd"><td><p>!=</p></td>
+<td><p>diferente</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">10</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">11</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">10</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">&gt;=</span> <span class="mi">10</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">42</span> <span class="o">==</span> <span class="mi">24</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">666</span> <span class="o">!=</span> <span class="mi">137</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">8</span><span class="o">**</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">60</span> <span class="o">+</span> <span class="mi">4</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">100</span> <span class="o">!=</span> <span class="mi">99</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="variaveis.html" class="btn btn-neutral float-right" title="Variáveis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="hello_world.html" class="btn btn-neutral float-left" title="Hello World" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2020, (CC BY-NC-SA 4.0) Grupy-Sanca
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

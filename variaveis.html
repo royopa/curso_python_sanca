@@ -1,0 +1,960 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Variáveis &mdash; Curso Introdutório de Python | Grupy-Sanca</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+    <link rel="next" title="Strings (sequência de caracteres)" href="strings.html" />
+    <link rel="prev" title="Python como calculadora" href="calculadora.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Curso Introdutório de Python
+          
+
+          
+            
+            <img src="_static/logo_small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introducao.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sobre_grupy.html">Sobre o grupy-sanca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacao.html">Guia de Instalação do Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacao.html#ambientes-de-desenvolvimento">Ambientes de Desenvolvimento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hello_world.html">Hello World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculadora.html">Python como calculadora</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Variáveis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#atribuicao">Atribuição</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nomes-de-variaveis">Nomes de Variáveis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#atribuicao-multipla">Atribuição múltipla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tipos-de-objetos">Tipos de objetos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#buscando-ajuda-rapidamente">Buscando ajuda rapidamente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#listando-variaveis-criadas">Listando variáveis criadas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercicios">Exercícios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html"><cite>Strings</cite> (sequência de caracteres)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Lendo valores do teclado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listas.html">Listas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicionarios.html">Dicionários</a></li>
+<li class="toctree-l1"><a class="reference internal" href="condicionais.html">Condicionais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controle.html">Estruturas de controle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repeticao.html">Estruturas de repetição</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funcoes.html">Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercicios.html">Exercícios e Desafios!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribuidores.html">Contribuidores</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso Introdutório de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Variáveis</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/variaveis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="variaveis">
+<h1>Variáveis<a class="headerlink" href="#variaveis" title="Link permanente para este título">¶</a></h1>
+<p>Variável é um <em>nome</em> que se refere a um <em>valor</em>.</p>
+<div class="section" id="atribuicao">
+<h2>Atribuição<a class="headerlink" href="#atribuicao" title="Link permanente para este título">¶</a></h2>
+<p>Atribuição é o processo de criar uma nova variável e dar um novo valor a
+ela.
+Alguns exemplos de atribuições:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numero</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numero</span>
+<span class="go">11</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;Me dá um copo d&#39;água&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span>
+<span class="go">&quot;Me dá um copo d&#39;água&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.141592</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pi</span>
+<span class="go">3.141592</span>
+</pre></div>
+</div>
+<p>No exemplo anterior realizamos três atribuições. No primeiro atribuímos um
+número inteiro à variável de nome <code class="docutils literal notranslate"><span class="pre">numero</span></code>; no segundo uma frase à
+variável <code class="docutils literal notranslate"><span class="pre">frase</span></code>; no último um número de ponto flutuante à <code class="docutils literal notranslate"><span class="pre">pi</span></code>.</p>
+</div>
+<div class="section" id="nomes-de-variaveis">
+<span id="section-nomes-variaveis"></span><h2>Nomes de Variáveis<a class="headerlink" href="#nomes-de-variaveis" title="Link permanente para este título">¶</a></h2>
+<p>Bons programadores escolhem nomes significativos para as suas variáveis
+- eles documentam o propósito da variável.</p>
+<p>Nomes de variáveis podem ter o tamanho que você achar necessário e podem
+conter tanto letras como números, porém não podem começar com números. É
+possível usar letras maiúsculas, porém a convenção é utilizar somente
+letras minúsculas para nomes de variáveis.</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">crieiumavariavelcomnomegiganteeestoucompreguiçadeescrevertudodenovo</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">crieiumavariavelcomnomegiganteeestoucompreguiçadeescrevertudodenovo</span> <span class="c1"># use TAB para autocompletar =D</span>
+<span class="go">10</span>
+</pre></div>
+</div>
+<p>Tentar dar um nome ilegal a uma variável ocasionará erro de sintaxe:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">123</span><span class="n">voa</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+        <span class="mi">123</span><span class="n">voa</span> <span class="o">=</span> <span class="mi">10</span>
+             <span class="o">^</span>
+<span class="gr">SyntaxError</span>: <span class="n">invalid syntax</span>
+</pre></div>
+</div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ol</span><span class="o">@</span> <span class="o">=</span> <span class="s2">&quot;oi&quot;</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+        <span class="n">ol</span><span class="o">@</span> <span class="o">=</span> <span class="s2">&quot;oi&quot;</span>
+            <span class="o">^</span>
+<span class="gr">SyntaxError</span>: <span class="n">invalid syntax</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; <span class="nv">def</span> <span class="o">=</span> <span class="m">2</span>.7
+Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+    ...
+        <span class="nv">def</span> <span class="o">=</span> <span class="m">2</span>.7
+            ^
+SyntaxError: invalid syntax
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">123voa</span></code> é ilegal pois começa com um número. <code class="docutils literal notranslate"><span class="pre">ol&#64;</span></code> é ilegal pois
+contém um caractere inválido (&#64;), mas o que há de errado com <code class="docutils literal notranslate"><span class="pre">def</span></code>?</p>
+<p>A questão é que <code class="docutils literal notranslate"><span class="pre">def</span></code> é uma palavra-chave da linguagem. O Python possui
+diversas palavras que são utilizadas na estrutura dos programas, por isso
+não podem ser utilizadas como nomes de variáveis.</p>
+<p>Outro ponto importante: não é possível acessar variáveis que
+ainda não foram definidas:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">nao_definida</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">NameError</span>: <span class="n">name &#39;nao_definida&#39; is not defined</span>
+</pre></div>
+</div>
+<p>Tentar acessar uma variável sem definí-la anteriormente ocasiona em um “erro
+de nome”.</p>
+<p>Também podemos atribuir expressões a uma variável:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">-</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
+<span class="go">13</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span>
+<span class="go">49</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">z</span>
+<span class="go">62</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="o">+</span> <span class="mi">2</span> <span class="c1"># 10 + 2</span>
+<span class="go">12</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">9</span> <span class="o">-</span> <span class="n">n</span> <span class="c1"># 9 - 10</span>
+<span class="go">-1</span>
+</pre></div>
+</div>
+<p>É importante lembrar que para mudar o valor de uma variável é preciso
+utilizar a atribuição. Nos dois exemplos anteriores não atribuímos as
+expressões à n, portanto seu valor continuou o mesmo.</p>
+<p>Vamos alterar o valor de <code class="docutils literal notranslate"><span class="pre">n</span></code>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">n</span>
+<span class="go">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n</span>
+<span class="go">12</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">9</span> <span class="o">-</span> <span class="n">n</span>
+<span class="go">-3</span>
+</pre></div>
+</div>
+<p>Outra forma de somar na variável:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">num</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">num</span> <span class="o">+=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">num</span>
+<span class="go">7</span>
+</pre></div>
+</div>
+<p>Também funciona com multiplicação:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">*=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
+<span class="go">6</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="atribuicao-multipla">
+<h2>Atribuição múltipla<a class="headerlink" href="#atribuicao-multipla" title="Link permanente para este título">¶</a></h2>
+<p>Uma funcionalidade interessante do Python é que ele permite atribuição
+múltipla. Isso é muito útil para trocar o valor de duas variáveis:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="mi">200</span>
+</pre></div>
+</div>
+<p>Para fazer essa troca em outras linguagens é necessário utilizar uma
+variável auxiliar para não perdemos um dos valores que queremos trocar.
+Vamos começar da maneira mais simples:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">b</span>  <span class="c1"># perdemos o valor de a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">200</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span>  <span class="c1"># como perdemos o valor de a, b vai continuar com seu valor original de 200</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
+<span class="go">200</span>
+</pre></div>
+</div>
+<p>A troca é bem sucedida se usamos uma variável auxiliar:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="go">1 200</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">aux</span> <span class="o">=</span> <span class="n">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">aux</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="go">200 1</span>
+</pre></div>
+</div>
+<p>Porém, como o Python permite atribuição múltipla, podemos resolver esse
+problema de uma forma muito mais simples:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="go">1 200</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="go">200 1</span>
+</pre></div>
+</div>
+<p>A atribuição múltipla também pode ser utilizada para simplificar a
+atribuição de variáveis, por exemplo:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">200</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="go">1 200</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="go">1 2 3 4</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">d</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="go">4 3 2 1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tipos-de-objetos">
+<h2>Tipos de objetos<a class="headerlink" href="#tipos-de-objetos" title="Link permanente para este título">¶</a></h2>
+<p>Criamos muitas variáveis até agora. Você lembra o tipo de cada uma? Para
+saber o tipo de um objeto ou variável, usamos a função <code class="docutils literal notranslate"><span class="pre">type()</span></code>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">&lt;class &#39;int&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="mf">2.3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="go">&lt;class &#39;float&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">)</span>
+<span class="go">&lt;class &#39;str&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">&lt;class &#39;bool&#39;&gt;</span>
+</pre></div>
+</div>
+<p>Python vem com alguns tipos básicos de objetos, dentre eles:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code>: verdadeiro ou falso.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code>: números inteiros.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code>: números reais.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">complex</span></code>: números complexos.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code>: <em>strings</em> (textos).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code>: <a class="reference internal" href="listas.html#section-listas"><span class="std std-ref">listas</span></a>. Estudaremos em breve o que são.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dict</span></code>: <a class="reference internal" href="dicionarios.html#section-dicionario"><span class="std std-ref">dicionários</span></a>. Estudaremos em breve o que são.</p></li>
+</ul>
+</div>
+<div class="section" id="buscando-ajuda-rapidamente">
+<h2>Buscando ajuda rapidamente<a class="headerlink" href="#buscando-ajuda-rapidamente" title="Link permanente para este título">¶</a></h2>
+<p>Está com dúvida em alguma coisa? Use a função <code class="docutils literal notranslate"><span class="pre">help()</span></code> e depois digite o
+que você busca.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">()</span>
+
+<span class="go">Welcome to Python 3.6&#39;s help utility!</span>
+
+<span class="go">If this is your first time using Python, you should definitely check out</span>
+<span class="go">the tutorial on the Internet at http://docs.python.org/3.6/tutorial/.</span>
+
+<span class="go">Enter the name of any module, keyword, or topic to get help on writing</span>
+<span class="go">Python programs and using Python modules.  To quit this help utility and</span>
+<span class="go">return to the interpreter, just type &quot;quit&quot;.</span>
+
+<span class="go">To get a list of available modules, keywords, symbols, or topics, type</span>
+<span class="go">&quot;modules&quot;, &quot;keywords&quot;, &quot;symbols&quot;, or &quot;topics&quot;.  Each module also comes</span>
+<span class="go">with a one-line summary of what it does; to list the modules whose name</span>
+<span class="go">or summary contain a given string such as &quot;spam&quot;, type &quot;modules spam&quot;.</span>
+
+<span class="go">help&gt;</span>
+<span class="go">You are now leaving help and returning to the Python interpreter.</span>
+<span class="go">If you want to ask for help on a particular object directly from the</span>
+<span class="go">interpreter, you can type &quot;help(object)&quot;.  Executing &quot;help(&#39;string&#39;)&quot;</span>
+<span class="go">has the same effect as typing a particular string at the help&gt; prompt.</span>
+</pre></div>
+</div>
+<p>E para buscar ajuda em uma coisa específica?</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+<span class="go">Help on built-in function len in module builtins:</span>
+
+<span class="go">len(obj, /)</span>
+<span class="go">    Return the number of items in a container.</span>
+</pre></div>
+</div>
+<p>Para sair do ambiente de ajuda, pressione a tecla <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="go">Help on class str in module builtins:</span>
+
+<span class="go">class str(object)</span>
+<span class="go"> |  str(object=&#39;&#39;) -&gt; str</span>
+<span class="go"> |  str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |  Create a new string object from the given object. If encoding or</span>
+<span class="go"> |  errors is specified, then the object must expose a data buffer</span>
+<span class="go"> |  that will be decoded using the given encoding and error handler.</span>
+<span class="go"> |  Otherwise, returns the result of object.__str__() (if defined)</span>
+<span class="go"> |  or repr(object).</span>
+<span class="go"> |  encoding defaults to sys.getdefaultencoding().</span>
+<span class="go"> |  errors defaults to &#39;strict&#39;.</span>
+<span class="go"> |</span>
+<span class="go"> |  Methods defined here:</span>
+<span class="go"> |</span>
+<span class="go"> |  __add__(self, value, /)</span>
+<span class="go"> |      Return self+value.</span>
+<span class="go"> |</span>
+<span class="go"> |  __contains__(self, key, /)</span>
+<span class="go"> |      Return key in self.</span>
+<span class="go"> |</span>
+<span class="go"> |  __eq__(self, value, /)</span>
+<span class="go"> |      Return self==value.</span>
+<span class="go"> |</span>
+<span class="go"> |  __format__(...)</span>
+<span class="go"> |      S.__format__(format_spec) -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a formatted version of S as described by format_spec.</span>
+<span class="go"> |</span>
+<span class="go"> |  __ge__(self, value, /)</span>
+<span class="go"> |      Return self&gt;=value.</span>
+<span class="go"> |</span>
+<span class="go"> |  __getattribute__(self, name, /)</span>
+<span class="go"> |      Return getattr(self, name).</span>
+<span class="go"> |</span>
+<span class="go"> |  __getitem__(self, key, /)</span>
+<span class="go"> |      Return self[key].</span>
+<span class="go"> |</span>
+<span class="go"> |  __getnewargs__(...)</span>
+<span class="go"> |</span>
+<span class="go"> |  __gt__(self, value, /)</span>
+<span class="go"> |      Return self&gt;value.</span>
+<span class="go"> |</span>
+<span class="go"> |  __hash__(self, /)</span>
+<span class="go"> |      Return hash(self).</span>
+<span class="go"> |</span>
+<span class="go"> |  __iter__(self, /)</span>
+<span class="go"> |      Implement iter(self).</span>
+<span class="go"> |</span>
+<span class="go"> |  __le__(self, value, /)</span>
+<span class="go"> |      Return self&lt;=value.</span>
+<span class="go"> |</span>
+<span class="go"> |  __len__(self, /)</span>
+<span class="go"> |      Return len(self).</span>
+<span class="go"> |</span>
+<span class="go"> |  __lt__(self, value, /)</span>
+<span class="go"> |      Return self&lt;value.</span>
+<span class="go"> |</span>
+<span class="go"> |  __mod__(self, value, /)</span>
+<span class="go"> |      Return self%value.</span>
+<span class="go"> |</span>
+<span class="go"> |  __mul__(self, value, /)</span>
+<span class="go"> |      Return self*value.n</span>
+<span class="go"> |</span>
+<span class="go"> |  __ne__(self, value, /)</span>
+<span class="go"> |      Return self!=value.</span>
+<span class="go"> |</span>
+<span class="go"> |  __new__(*args, **kwargs) from builtins.type</span>
+<span class="go"> |      Create and return a new object.  See help(type) for accurate signature.</span>
+<span class="go"> |</span>
+<span class="go"> |  __repr__(self, /)</span>
+<span class="go"> |      Return repr(self).</span>
+<span class="go"> |</span>
+<span class="go"> |  __rmod__(self, value, /)</span>
+<span class="go"> |      Return value%self.</span>
+<span class="go"> |</span>
+<span class="go"> |  __rmul__(self, value, /)</span>
+<span class="go"> |      Return self*value.</span>
+<span class="go"> |</span>
+<span class="go"> |  __sizeof__(...)</span>
+<span class="go"> |      S.__sizeof__() -&gt; size of S in memory, in bytes</span>
+<span class="go"> |</span>
+<span class="go"> |  __str__(self, /)</span>
+<span class="go"> |      Return str(self).</span>
+<span class="go"> |</span>
+<span class="go"> |  capitalize(...)</span>
+<span class="go"> |      S.capitalize() -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a capitalized version of S, i.e. make the first character</span>
+<span class="go"> |      have upper case and the rest lower case.</span>
+<span class="go"> |</span>
+<span class="go"> |  casefold(...)</span>
+<span class="go"> |      S.casefold() -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a version of S suitable for caseless comparisons.</span>
+<span class="go"> |</span>
+<span class="go"> |  center(...)</span>
+<span class="go"> |      S.center(width[, fillchar]) -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return S centered in a string of length width. Padding is</span>
+<span class="go"> |      done using the specified fill character (default is a space)</span>
+<span class="go"> |</span>
+<span class="go"> |  count(...)</span>
+<span class="go"> |      S.count(sub[, start[, end]]) -&gt; int</span>
+<span class="go"> |</span>
+<span class="go"> |      Return the number of non-overlapping occurrences of substring sub in</span>
+<span class="go"> |      string S[start:end].  Optional arguments start and end are</span>
+<span class="go"> |      interpreted as in slice notation.</span>
+<span class="go"> |</span>
+<span class="go"> |  encode(...)</span>
+<span class="go"> |      S.encode(encoding=&#39;utf-8&#39;, errors=&#39;strict&#39;) -&gt; bytes</span>
+<span class="go"> |</span>
+<span class="go"> |      Encode S using the codec registered for encoding. Default encoding</span>
+<span class="go"> |      is &#39;utf-8&#39;. errors may be given to set a different error</span>
+<span class="go"> |      handling scheme. Default is &#39;strict&#39; meaning that encoding errors raise</span>
+<span class="go"> |      a UnicodeEncodeError. Other possible values are &#39;ignore&#39;, &#39;replace&#39; and</span>
+<span class="go"> |      &#39;xmlcharrefreplace&#39; as well as any other name registered with</span>
+<span class="go"> |      codecs.register_error that can handle UnicodeEncodeErrors.</span>
+<span class="go"> |</span>
+<span class="go"> |  endswith(...)</span>
+<span class="go"> |      S.endswith(suffix[, start[, end]]) -&gt; bool</span>
+<span class="go"> |</span>
+<span class="go"> |      Return True if S ends with the specified suffix, False otherwise.</span>
+<span class="go"> |      With optional start, test S beginning at that position.</span>
+<span class="go"> |      With optional end, stop comparing S at that position.</span>
+<span class="go"> |      suffix can also be a tuple of strings to try.</span>
+<span class="go"> |</span>
+<span class="go"> |  expandtabs(...)</span>
+<span class="go"> |      S.expandtabs(tabsize=8) -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a copy of S where all tab characters are expanded using spaces.</span>
+<span class="go"> |      If tabsize is not given, a tab size of 8 characters is assumed.</span>
+<span class="go"> |</span>
+<span class="go"> |  find(...)</span>
+<span class="go"> |      S.find(sub[, start[, end]]) -&gt; int</span>
+<span class="go"> |</span>
+<span class="go"> |      Return the lowest index in S where substring sub is found,</span>
+<span class="go"> |      such that sub is contained within S[start:end].  Optional</span>
+<span class="go"> |      arguments start and end are interpreted as in slice notation.</span>
+<span class="go"> |</span>
+<span class="go"> |      Return -1 on failure.</span>
+<span class="go"> |</span>
+<span class="go"> |  format(...)</span>
+<span class="go"> |      S.format(*args, **kwargs) -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a formatted version of S, using substitutions from args and kwargs.</span>
+<span class="go"> |      The substitutions are identified by braces (&#39;{&#39; and &#39;}&#39;).</span>
+<span class="go"> |</span>
+<span class="go"> |  format_map(...)</span>
+<span class="go"> |      S.format_map(mapping) -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a formatted version of S, using substitutions from mapping.</span>
+<span class="go"> |      The substitutions are identified by braces (&#39;{&#39; and &#39;}&#39;).</span>
+<span class="go"> |</span>
+<span class="go"> |  index(...)</span>
+<span class="go"> |      S.index(sub[, start[, end]]) -&gt; int</span>
+<span class="go"> |</span>
+<span class="go"> |      Like S.find() but raise ValueError when the substring is not found.</span>
+<span class="go"> |</span>
+<span class="go"> |  isalnum(...)</span>
+<span class="go"> |      S.isalnum() -&gt; bool</span>
+<span class="go"> |</span>
+<span class="go"> |      Return True if all characters in S are alphanumeric</span>
+<span class="go"> |      and there is at least one character in S, False otherwise.</span>
+<span class="go"> |</span>
+<span class="go"> |  isalpha(...)</span>
+<span class="go"> |      S.isalpha() -&gt; bool</span>
+<span class="go"> |</span>
+<span class="go"> |      Return True if all characters in S are alphabetic</span>
+<span class="go"> |      and there is at least one character in S, False otherwise.</span>
+<span class="go"> |</span>
+<span class="go"> |  isdecimal(...)</span>
+<span class="go"> |      S.isdecimal() -&gt; bool</span>
+<span class="go"> |</span>
+<span class="go"> |      Return True if there are only decimal characters in S,</span>
+<span class="go"> |      False otherwise.</span>
+<span class="go"> |</span>
+<span class="go"> |  isdigit(...)</span>
+<span class="go"> |      S.isdigit() -&gt; bool</span>
+<span class="go"> |</span>
+<span class="go"> |      Return True if all characters in S are digits</span>
+<span class="go"> |      and there is at least one character in S, False otherwise.</span>
+<span class="go"> |</span>
+<span class="go"> |  isidentifier(...)</span>
+<span class="go"> |      S.isidentifier() -&gt; bool</span>
+<span class="go"> |</span>
+<span class="go"> |      Return True if S is a valid identifier according</span>
+<span class="go"> |      to the language definition.</span>
+<span class="go"> |</span>
+<span class="go"> |      Use keyword.iskeyword() to test for reserved identifiers</span>
+<span class="go"> |      such as &quot;def&quot; and &quot;class&quot;.</span>
+<span class="go"> |</span>
+<span class="go"> |  islower(...)</span>
+<span class="go"> |      S.islower() -&gt; bool</span>
+<span class="go"> |</span>
+<span class="go"> |      Return True if all cased characters in S are lowercase and there is</span>
+<span class="go"> |      at least one cased character in S, False otherwise.</span>
+<span class="go"> |</span>
+<span class="go"> |  isnumeric(...)</span>
+<span class="go"> |      S.isnumeric() -&gt; bool</span>
+<span class="go"> |</span>
+<span class="go"> |      Return True if there are only numeric characters in S,</span>
+<span class="go"> |      False otherwise.</span>
+<span class="go"> |</span>
+<span class="go"> |  isprintable(...)</span>
+<span class="go"> |      S.isprintable() -&gt; bool</span>
+<span class="go"> |</span>
+<span class="go"> |      Return True if all characters in S are considered</span>
+<span class="go"> |      printable in repr() or S is empty, False otherwise.</span>
+<span class="go"> |</span>
+<span class="go"> |  isspace(...)</span>
+<span class="go"> |      S.isspace() -&gt; bool</span>
+<span class="go"> |</span>
+<span class="go"> |      Return True if all characters in S are whitespace</span>
+<span class="go"> |      and there is at least one character in S, False otherwise.</span>
+<span class="go"> |</span>
+<span class="go"> |  istitle(...)</span>
+<span class="go"> |      S.istitle() -&gt; bool</span>
+<span class="go"> |</span>
+<span class="go"> |      Return True if S is a titlecased string and there is at least one</span>
+<span class="go"> |      character in S, i.e. upper- and titlecase characters may only</span>
+<span class="go"> |      follow uncased characters and lowercase characters only cased ones.</span>
+<span class="go"> |      Return False otherwise.</span>
+<span class="go"> |</span>
+<span class="go"> |  isupper(...)</span>
+<span class="go"> |      S.isupper() -&gt; bool</span>
+<span class="go"> |</span>
+<span class="go"> |      Return True if all cased characters in S are uppercase and there is</span>
+<span class="go"> |      at least one cased character in S, False otherwise.</span>
+<span class="go"> |</span>
+<span class="go"> |  join(...)</span>
+<span class="go"> |      S.join(iterable) -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a string which is the concatenation of the strings in the</span>
+<span class="go"> |      iterable.  The separator between elements is S.</span>
+<span class="go"> |</span>
+<span class="go"> |  ljust(...)</span>
+<span class="go"> |      S.ljust(width[, fillchar]) -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return S left-justified in a Unicode string of length width. Padding is</span>
+<span class="go"> |      done using the specified fill character (default is a space).</span>
+<span class="go"> |</span>
+<span class="go"> |  lower(...)</span>
+<span class="go"> |      S.lower() -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a copy of the string S converted to lowercase.</span>
+<span class="go"> |</span>
+<span class="go"> |  lstrip(...)</span>
+<span class="go"> |      S.lstrip([chars]) -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a copy of the string S with leading whitespace removed.</span>
+<span class="go"> |      If chars is given and not None, remove characters in chars instead.</span>
+<span class="go"> |</span>
+<span class="go"> |  partition(...)</span>
+<span class="go"> |      S.partition(sep) -&gt; (head, sep, tail)</span>
+<span class="go"> |</span>
+<span class="go"> |      Search for the separator sep in S, and return the part before it,</span>
+<span class="go"> |      the separator itself, and the part after it.  If the separator is not</span>
+<span class="go"> |      found, return S and two empty strings.</span>
+<span class="go"> |</span>
+<span class="go"> |  replace(...)</span>
+<span class="go"> |      S.replace(old, new[, count]) -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a copy of S with all occurrences of substring</span>
+<span class="go"> |      old replaced by new.  If the optional argument count is</span>
+<span class="go"> |      given, only the first count occurrences are replaced.</span>
+<span class="go"> |</span>
+<span class="go"> |  rfind(...)</span>
+<span class="go"> |      S.rfind(sub[, start[, end]]) -&gt; int</span>
+<span class="go"> |</span>
+<span class="go"> |      Return the highest index in S where substring sub is found,</span>
+<span class="go"> |      such that sub is contained within S[start:end].  Optional</span>
+<span class="go"> |      arguments start and end are interpreted as in slice notation.</span>
+<span class="go"> |</span>
+<span class="go"> |      Return -1 on failure.</span>
+<span class="go"> |</span>
+<span class="go"> |  rindex(...)</span>
+<span class="go"> |      S.rindex(sub[, start[, end]]) -&gt; int</span>
+<span class="go"> |</span>
+<span class="go"> |      Like S.rfind() but raise ValueError when the substring is not found.</span>
+<span class="go"> |</span>
+<span class="go"> |  rjust(...)</span>
+<span class="go"> |      S.rjust(width[, fillchar]) -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return S right-justified in a string of length width. Padding is</span>
+<span class="go"> |      done using the specified fill character (default is a space).</span>
+<span class="go"> |</span>
+<span class="go"> |  rpartition(...)</span>
+<span class="go"> |      S.rpartition(sep) -&gt; (head, sep, tail)</span>
+<span class="go"> |</span>
+<span class="go"> |      Search for the separator sep in S, starting at the end of S, and return</span>
+<span class="go"> |      the part before it, the separator itself, and the part after it.  If the</span>
+<span class="go"> |      separator is not found, return two empty strings and S.</span>
+<span class="go"> |</span>
+<span class="go"> |  rsplit(...)</span>
+<span class="go"> |      S.rsplit(sep=None, maxsplit=-1) -&gt; list of strings</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a list of the words in S, using sep as the</span>
+<span class="go"> |      delimiter string, starting at the end of the string and</span>
+<span class="go"> |      working to the front.  If maxsplit is given, at most maxsplit</span>
+<span class="go"> |      splits are done. If sep is not specified, any whitespace string</span>
+<span class="go"> |      is a separator.</span>
+<span class="go"> |</span>
+<span class="go"> |  rstrip(...)</span>
+<span class="go"> |      S.rstrip([chars]) -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a copy of the string S with trailing whitespace removed.</span>
+<span class="go"> |      If chars is given and not None, remove characters in chars instead.</span>
+<span class="go"> |</span>
+<span class="go"> |  split(...)</span>
+<span class="go"> |      S.split(sep=None, maxsplit=-1) -&gt; list of strings</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a list of the words in S, using sep as the</span>
+<span class="go"> |      delimiter string.  If maxsplit is given, at most maxsplit</span>
+<span class="go"> |      splits are done. If sep is not specified or is None, any</span>
+<span class="go"> |      whitespace string is a separator and empty strings are</span>
+<span class="go"> |      removed from the result.</span>
+<span class="go"> |</span>
+<span class="go"> |  splitlines(...)</span>
+<span class="go"> |      S.splitlines([keepends]) -&gt; list of strings</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a list of the lines in S, breaking at line boundaries.</span>
+<span class="go"> |      Line breaks are not included in the resulting list unless keepends</span>
+<span class="go"> |      is given and true.</span>
+<span class="go"> |</span>
+<span class="go"> |  startswith(...)</span>
+<span class="go"> |      S.startswith(prefix[, start[, end]]) -&gt; bool</span>
+<span class="go"> |</span>
+<span class="go"> |      Return True if S starts with the specified prefix, False otherwise.</span>
+<span class="go"> |      With optional start, test S beginning at that position.</span>
+<span class="go"> |      With optional end, stop comparing S at that position.</span>
+<span class="go"> |      prefix can also be a tuple of strings to try.</span>
+<span class="go"> |</span>
+<span class="go"> |  strip(...)</span>
+<span class="go"> |      S.strip([chars]) -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a copy of the string S with leading and trailing</span>
+<span class="go"> |      whitespace removed.</span>
+<span class="go"> |      If chars is given and not None, remove characters in chars instead.</span>
+<span class="go"> |</span>
+<span class="go"> |  swapcase(...)</span>
+<span class="go"> |      S.swapcase() -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a copy of S with uppercase characters converted to lowercase</span>
+<span class="go"> |      and vice versa.</span>
+<span class="go"> |</span>
+<span class="go"> |  title(...)</span>
+<span class="go"> |      S.title() -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a titlecased version of S, i.e. words start with title case</span>
+<span class="go"> |      characters, all remaining cased characters have lower case.</span>
+<span class="go"> |</span>
+<span class="go"> |  translate(...)</span>
+<span class="go"> |      S.translate(table) -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a copy of the string S in which each character has been mapped</span>
+<span class="go"> |      through the given translation table. The table must implement</span>
+<span class="go"> |      lookup/indexing via __getitem__, for instance a dictionary or list,</span>
+<span class="go"> |      mapping Unicode ordinals to Unicode ordinals, strings, or None. If</span>
+<span class="go"> |      this operation raises LookupError, the character is left untouched.</span>
+<span class="go"> |      Characters mapped to None are deleted.</span>
+<span class="go"> |</span>
+<span class="go"> |  upper(...)</span>
+<span class="go"> |      S.upper() -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Return a copy of S converted to uppercase.</span>
+<span class="go"> |</span>
+<span class="go"> |  zfill(...)</span>
+<span class="go"> |      S.zfill(width) -&gt; str</span>
+<span class="go"> |</span>
+<span class="go"> |      Pad a numeric string S with zeros on the left, to fill a field</span>
+<span class="go"> |      of the specified width. The string S is never truncated.</span>
+<span class="go"> |</span>
+<span class="go"> |  ----------------------------------------------------------------------</span>
+<span class="go"> |  Static methods defined here:</span>
+<span class="go"> |</span>
+<span class="go"> |  maketrans(x, y=None, z=None, /)</span>
+<span class="go"> |      Return a translation table usable for str.translate().</span>
+<span class="go"> |</span>
+<span class="go"> |      If there is only one argument, it must be a dictionary mapping Unicode</span>
+<span class="go"> |      ordinals (integers) or characters to Unicode ordinals, strings or None.</span>
+<span class="go"> |      Character keys will be then converted to ordinals.</span>
+<span class="go"> |      If there are two arguments, they must be strings of equal length, and</span>
+<span class="go"> |      in the resulting dictionary, each character in x will be mapped to the</span>
+<span class="go"> |      character at the same position in y. If there is a third argument, it</span>
+<span class="go"> |      must be a string, whose characters will be mapped to None in the result.</span>
+</pre></div>
+</div>
+<p>A <a class="reference external" href="https://docs.python.org/3/">documentação oficial</a> do Python contém toda a
+referência sobre a linguagem, detalhes sobre cada função e alguns exemplos (em inglês).</p>
+</div>
+<div class="section" id="listando-variaveis-criadas">
+<h2>Listando variáveis criadas<a class="headerlink" href="#listando-variaveis-criadas" title="Link permanente para este título">¶</a></h2>
+<p>Em algum momento durante o seu código você pode querer saber quais variáveis já
+foram declaradas, ou até mesmo o valor atual delas. Podemos listar todas as
+variáveis declaradas no código usando o comando <code class="docutils literal notranslate"><span class="pre">dir()</span></code>. Veja um exemplo:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">dir</span><span class="p">()</span>
+<span class="go">[&#39;__annotations__&#39;, &#39;__builtins__&#39;, &#39;__doc__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;, &#39;a&#39;, &#39;b&#39;]</span>
+</pre></div>
+</div>
+<p>Veja que nossas variáveis declaradas aparecem no final do resultado de <code class="docutils literal notranslate"><span class="pre">dir()</span></code>.
+Não se assuste com os outros elementos que aparecem nesse resultado. Essas
+variáveis são criadas e usadas pelo próprio Python, e não são importantes
+nesse momento.</p>
+<p>Outra opção para visualizar as variáveis declaradas são os comandos <code class="docutils literal notranslate"><span class="pre">globals()</span></code>
+e <code class="docutils literal notranslate"><span class="pre">locals()</span></code>. Ambas mostram não só as variáveis declaradas, mas também seu
+valor atual. A diferença entre ambas está no escopo em que atuam, mas veja que
+seus resultados são semelhantes:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">locals</span><span class="p">()</span>
+<span class="go">{&#39;__name__&#39;: &#39;__main__&#39;, &#39;__doc__&#39;: None, &#39;__package__&#39;: None, &#39;__loader__&#39;: &lt;class &#39;_frozen_importlib.BuiltinImporter&#39;&gt;, &#39;__spec__&#39;: None, &#39;__annotations__&#39;: {}, &#39;__builtins__&#39;: &lt;module &#39;builtins&#39; (built-in)&gt;, &#39;a&#39;: 1, &#39;b&#39;: 2}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">globals</span><span class="p">()</span>
+<span class="go">{&#39;__name__&#39;: &#39;__main__&#39;, &#39;__doc__&#39;: None, &#39;__package__&#39;: None, &#39;__loader__&#39;: &lt;class &#39;_frozen_importlib.BuiltinImporter&#39;&gt;, &#39;__spec__&#39;: None, &#39;__annotations__&#39;: {}, &#39;__builtins__&#39;: &lt;module &#39;builtins&#39; (built-in)&gt;, &#39;a&#39;: 1, &#39;b&#39;: 2}</span>
+</pre></div>
+</div>
+<p>Caso você esteja usando o IPython, os comandos mágicos <code class="docutils literal notranslate"><span class="pre">%who</span></code> e <code class="docutils literal notranslate"><span class="pre">%whos</span></code> são
+ótimas alternativas ao que já vimos anteriormente, pois retiram do resultado as
+variáveis declaradas pelo próprio Python, permitindo uma melhor visualização das
+que você mesmo declarou. Olhe como o IPython pode simplificar nossa vida nesse
+caso:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">%</span><span class="n">who</span>
+<span class="go">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">%</span><span class="n">whos</span>
+<span class="go">Variable   Type    Data/Info</span>
+<span class="go">----------------------------</span>
+<span class="go">a          int     1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercicios">
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Supondo que a cotação do dólar esteja em <span class="math notranslate nohighlight">\(\mathrm{R}\$\, 3{,}25\)</span>,
+salve esse valor em uma variável e utilize-o para calcular quanto você
+teria ao cambiar <span class="math notranslate nohighlight">\(\mathrm{R}\$\, 65{,}00\)</span> para dólares.</p></li>
+<li><p>Abelindo é um professor muito malvado. Ele quer decidir como reprovar
+Rondinelly, que tirou 8.66, 5.35, 5 e 1, respectivamente, nas provas
+P1, P2, P3 e P4. Para isso, ele pode calcular a nota final usando média
+aritmética (M.A.), média geométrica (M.G.) ou média harmônica (M.H.).</p>
+<div class="math notranslate nohighlight">
+\[M.A. = \frac{P_1 + P_2 + P_3 + P_4}{4}\]</div>
+<div class="math notranslate nohighlight">
+\[M.G. = \sqrt[4]{|P_1 P_2 P_3 P_4|}\]</div>
+<div class="math notranslate nohighlight">
+\[M.H. = \frac{4}{\frac{1}{P_1} + \frac{1}{P_2} + \frac{1}{P_3} + \frac{1}{P_4}}\]</div>
+<p>Qual dessas médias dá a maior nota pra Rondinelly? E qual das médias dá
+a pior nota?</p>
+</li>
+<li><p>Josefson deseja fazer compras na China. Ela quer comprar
+um celular de <span class="math notranslate nohighlight">\(\mathrm{USD}\, 299{,}99\)</span>,
+uma chaleira de <span class="math notranslate nohighlight">\(\mathrm{USD}\, 23{,}87\)</span>,
+um gnomo de jardim de <span class="math notranslate nohighlight">\(\mathrm{USD}\, 66{,}66\)</span> e
+6 adesivos de unicórnio de <span class="math notranslate nohighlight">\(\mathrm{USD}\, 1{,}42\)</span> cada um. O frete
+de tudo isso para a cidade de Rolândia, no Paraná, ficou em
+<span class="math notranslate nohighlight">\(\mathrm{USD}\, 12{,}34\)</span>.</p>
+<ol class="loweralpha simple">
+<li><p>Calcule o valor total da compra em dólares.</p></li>
+<li><p>Usando o mesmo valor do dólar do exercício anterior, calcule o preço
+final em Reais. Lembre-se que o valor do <em>IOF</em> é de <span class="math notranslate nohighlight">\(6{,}38 \, \%\)</span>.</p></li>
+<li><p>Quanto ela pagou apenas de <em>IOF</em>?</p></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="strings.html" class="btn btn-neutral float-right" title="Strings (sequência de caracteres)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="calculadora.html" class="btn btn-neutral float-left" title="Python como calculadora" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2020, (CC BY-NC-SA 4.0) Grupy-Sanca
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

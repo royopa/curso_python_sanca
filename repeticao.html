@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Estruturas de repetição &mdash; Curso Introdutório de Python | Grupy-Sanca</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+    <link rel="next" title="Funções" href="funcoes.html" />
+    <link rel="prev" title="Estruturas de controle" href="controle.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Curso Introdutório de Python
+          
+
+          
+            
+            <img src="_static/logo_small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introducao.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sobre_grupy.html">Sobre o grupy-sanca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacao.html">Guia de Instalação do Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacao.html#ambientes-de-desenvolvimento">Ambientes de Desenvolvimento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hello_world.html">Hello World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculadora.html">Python como calculadora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variaveis.html">Variáveis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html"><cite>Strings</cite> (sequência de caracteres)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Lendo valores do teclado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listas.html">Listas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicionarios.html">Dicionários</a></li>
+<li class="toctree-l1"><a class="reference internal" href="condicionais.html">Condicionais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controle.html">Estruturas de controle</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Estruturas de repetição</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#exercicios">Exercícios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="funcoes.html">Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercicios.html">Exercícios e Desafios!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribuidores.html">Contribuidores</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso Introdutório de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Estruturas de repetição</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/repeticao.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="estruturas-de-repeticao">
+<h1>Estruturas de repetição<a class="headerlink" href="#estruturas-de-repeticao" title="Link permanente para este título">¶</a></h1>
+<p>As estruturas de repetição são utilizadas quando queremos que um bloco de código
+seja executado várias vezes.</p>
+<p>Em Python existem duas formas de criar uma estrutura de repetição:</p>
+<ul class="simple">
+<li><p>O <code class="docutils literal notranslate"><span class="pre">for</span></code> é usado quando se quer iterar sobre um bloco de código um
+número determinado de vezes.</p></li>
+<li><p>O <code class="docutils literal notranslate"><span class="pre">while</span></code> é usando quado queremos que o bloco de código seja repetido
+até que uma condição seja satisfeita. Ou seja, é necessário que uma
+expressão boleana dada seja verdadeira. Assim que ela se tornar falsa,
+o <code class="docutils literal notranslate"><span class="pre">while</span></code> para.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Na linguagem Python a indentação é obrigatória. assim como nas estruturas
+de controle, as estruturas de repetição também precisam.</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Aqui repetimos o print 3 vezes</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">0</span>
+<span class="go">1</span>
+<span class="go">2</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Aqui iniciamos o n em 0, e repetimos o print até que seu valor seja maior ou igual a 3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="gp">...</span>
+<span class="go">0</span>
+<span class="go">1</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+</div>
+<p>O <em>loop</em> <code class="docutils literal notranslate"><span class="pre">for</span></code> em Python itera sobre os itens de um conjunto, sendo assim, o
+<code class="docutils literal notranslate"><span class="pre">range(0,</span> <span class="pre">3)</span></code> precisa ser um conjunto de elementos. E na verdade ele é:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="go">[0, 1, 2]</span>
+</pre></div>
+</div>
+<p>Para iterar sobre uma lista:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">numero</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">1</span>
+<span class="go">4</span>
+<span class="go">9</span>
+<span class="go">16</span>
+<span class="go">100</span>
+</pre></div>
+</div>
+<p>Isso se aplica para <em>strings</em> também:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Para cada letra na palavra, imprimir a letra</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">palavra</span> <span class="o">=</span> <span class="s2">&quot;casa&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">letra</span> <span class="ow">in</span> <span class="n">palavra</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">letra</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">c</span>
+<span class="go">a</span>
+<span class="go">s</span>
+<span class="go">a</span>
+</pre></div>
+</div>
+<p>Em dicionários podemos fazer assim:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">gatinhos</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Português&quot;</span><span class="p">:</span> <span class="s2">&quot;gato&quot;</span><span class="p">,</span> <span class="s2">&quot;Inglês&quot;</span><span class="p">:</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Francês&quot;</span><span class="p">:</span> <span class="s2">&quot;chat&quot;</span><span class="p">,</span> <span class="s2">&quot;Finlandês&quot;</span><span class="p">:</span> <span class="s2">&quot;Kissa&quot;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">chave</span><span class="p">,</span> <span class="n">valor</span> <span class="ow">in</span> <span class="n">gatinhos</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">chave</span><span class="p">,</span> <span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="n">valor</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">Português -&gt; gato</span>
+<span class="go">Inglês -&gt; cat</span>
+<span class="go">Francês -&gt; chat</span>
+<span class="go">Finlandês -&gt; Kissa</span>
+</pre></div>
+</div>
+<p>Para auxiliar as estruturas de repetição, existem dois comandos:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">break</span></code>: É usado para sair de um <em>loop</em>, não importando o estado em
+que se encontra.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">continue</span></code>: Funciona de maneira parecida com a do <code class="docutils literal notranslate"><span class="pre">break</span></code>, porém
+no lugar de encerrar o <em>loop</em>, ele faz com que todo o código que
+esteja abaixo (porém ainda dentro do <em>loop</em>) seja ignorado e avança
+para a próxima iteração.</p></li>
+</ul>
+</div></blockquote>
+<p>Veja a seguir um exemplo de um código que ilustra o uso desses comandos. Note que há uma <em>string</em> de documentação no começo que explica a funcionalidade.</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="go">&quot;&quot;&quot;</span>
+<span class="go">Esse código deve rodar até que a palavra &quot;sair&quot; seja digitada.</span>
+<span class="go">* Caso uma palavra com 2 ou menos caracteres seja digitada, um aviso</span>
+<span class="go">  deve ser exibido e o loop será executado do início (devido ao</span>
+<span class="go">  continue), pedindo uma nova palavra ao usuário.</span>
+<span class="go">* Caso qualquer outra palavra diferente de &quot;sair&quot; seja digitada, um</span>
+<span class="go">  aviso deve ser exibido.</span>
+<span class="go">* Por fim, caso a palavra seja &quot;sair&quot;, uma mensagem deve ser exibida e o</span>
+<span class="go">  loop deve ser encerrado (break).</span>
+<span class="go">&quot;&quot;&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">string_digitada</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Digite uma palavra: &quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">string_digitada</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;sair&quot;</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fim!&quot;</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">break</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">string_digitada</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;String muito pequena&quot;</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">continue</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tente digitar </span><span class="se">\&quot;</span><span class="s2">sair</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">Digite uma palavra: oi</span>
+<span class="go">Tente digitar &quot;sair&quot;</span>
+<span class="go">Digite uma palavra: ?</span>
+<span class="go">String muito pequena</span>
+<span class="go">Digite uma palavra: sair</span>
+<span class="go">Fim!</span>
+</pre></div>
+</div>
+<div class="section" id="exercicios">
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Calcule a tabuada do 13.</p></li>
+<li><p>Ler do teclado uma lista com 5 inteiros e imprimir o menor valor.</p></li>
+<li><p>Ler do teclado uma lista com 5 inteiros e imprimir <code class="docutils literal notranslate"><span class="pre">True</span></code> se a lista
+estiver ordenada de forma crescente ou False caso contrário.</p></li>
+<li><p>Exiba em ordem decrescente todos os números de 500 até 10.</p></li>
+<li><p>Ler do teclado 10 números e imprima a quantidade de números entre 10 e 50.</p></li>
+<li><p>Ler do teclado a idade e o sexo de 10 pessoas, calcule e imprima:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>idade média das mulheres</p></li>
+<li><p>idade média dos homens</p></li>
+<li><p>idade média do grupo</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Calcule o somatório dos números de 1 a 100 e imprima o resultado.</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="funcoes.html" class="btn btn-neutral float-right" title="Funções" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="controle.html" class="btn btn-neutral float-left" title="Estruturas de controle" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2020, (CC BY-NC-SA 4.0) Grupy-Sanca
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

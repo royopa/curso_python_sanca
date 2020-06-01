@@ -1,0 +1,611 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Strings (sequência de caracteres) &mdash; Curso Introdutório de Python | Grupy-Sanca</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+    <link rel="next" title="Lendo valores do teclado" href="input.html" />
+    <link rel="prev" title="Variáveis" href="variaveis.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Curso Introdutório de Python
+          
+
+          
+            
+            <img src="_static/logo_small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introducao.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sobre_grupy.html">Sobre o grupy-sanca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacao.html">Guia de Instalação do Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacao.html#ambientes-de-desenvolvimento">Ambientes de Desenvolvimento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hello_world.html">Hello World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculadora.html">Python como calculadora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variaveis.html">Variáveis</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><cite>Strings</cite> (sequência de caracteres)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tamanho">Tamanho</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#indices">Índices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fatias">Fatias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#formatacao-de-strings">Formatação de strings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#alternativa-ao-format">Alternativa ao <cite>.format()</cite></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#separacao-de-strings">Separação de <em>Strings</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercicios">Exercícios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Lendo valores do teclado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listas.html">Listas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicionarios.html">Dicionários</a></li>
+<li class="toctree-l1"><a class="reference internal" href="condicionais.html">Condicionais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controle.html">Estruturas de controle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repeticao.html">Estruturas de repetição</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funcoes.html">Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercicios.html">Exercícios e Desafios!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribuidores.html">Contribuidores</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso Introdutório de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li><cite>Strings</cite> (sequência de caracteres)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/strings.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="strings-sequencia-de-caracteres">
+<h1><cite>Strings</cite> (sequência de caracteres)<a class="headerlink" href="#strings-sequencia-de-caracteres" title="Link permanente para este título">¶</a></h1>
+<p><em>Strings</em> são tipos que armazenam uma <em>sequência de caracteres</em>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Texto bonito&quot;</span>
+<span class="go">&#39;Texto bonito&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Texto com acentos de cedilhas: hoje é dia de caça!&quot;</span>
+<span class="go">&#39;Texto com acentos de cedilhas: hoje é dia de caça!&#39;</span>
+</pre></div>
+</div>
+<p>As <em>strings</em> aceitam aspas simples também:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;Silvio Santos&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nome</span>
+<span class="go">&#39;Silvio Santos&#39;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p><em>Strings</em> aceitam os dois tipos de aspas, desde que seja
+consistente. Se começou com uma, termine com aquela!</p>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cor_da_caneta</span> <span class="o">=</span> <span class="s2">&quot;azul brilhante&#39;</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>
+    <span class="n">cor_da_caneta</span> <span class="o">=</span> <span class="s2">&quot;azul brilhante&#39;</span>
+                                   <span class="o">^</span>
+<span class="gr">SyntaxError</span>: <span class="n">EOL while scanning string literal</span>
+</pre></div>
+</div>
+<p>Também é possível fazer algumas operações com strings:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">nome</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="go">&#39;Silvio SantosSilvio SantosSilvio Santos&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nome</span> <span class="o">*</span> <span class="mf">3.14</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">TypeError</span>: <span class="n">can&#39;t multiply sequence by non-int of type &#39;float&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">canto1</span> <span class="o">=</span> <span class="s1">&#39;vem aí, &#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">canto2</span> <span class="o">=</span> <span class="s1">&#39;lá &#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nome</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">canto1</span> <span class="o">+</span> <span class="n">canto2</span> <span class="o">*</span> <span class="mi">6</span> <span class="o">+</span> <span class="s1">&#39;!!&#39;</span>
+<span class="go">&#39;Silvio Santos vem aí, lá lá lá lá lá lá !!&#39;</span>
+</pre></div>
+</div>
+<p>Para strings em várias linhas, utilize 3 aspas:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">string_grande</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Aqui consigo inserir um textão com várias linhas, posso iniciar em uma...</span>
+<span class="gp">... </span><span class="s1">e posso continuar em outra</span>
+<span class="gp">... </span><span class="s1">e em outra</span>
+<span class="gp">... </span><span class="s1">e mais uma</span>
+<span class="gp">... </span><span class="s1">e acabou.&#39;&#39;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">string_grande</span>
+<span class="go">&#39;Aqui consigo inserir um textão com várias linhas, posso iniciar em uma...\ne posso continuar em outra\ne em outra\ne mais uma\ne acabou.&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">string_grande</span><span class="p">)</span>
+<span class="go">Aqui consigo inserir um textão com várias linhas, posso iniciar em uma...</span>
+<span class="go">e posso continuar em outra</span>
+<span class="go">e em outra</span>
+<span class="go">e mais uma</span>
+<span class="go">e acabou.</span>
+</pre></div>
+</div>
+<p>Caso queira um texto que dentro tem aspas, como <code class="docutils literal notranslate"><span class="pre">Me</span> <span class="pre">dá</span> <span class="pre">um</span> <span class="pre">copo</span> <span class="pre">d'água</span></code>, é
+necessário utilizar aspas duplas para formar a <em>string</em>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">agua</span> <span class="o">=</span> <span class="s2">&quot;Me dá um copo d&#39;água&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">agua</span>
+<span class="go">&quot;Me dá um copo d&#39;água&quot;</span>
+</pre></div>
+</div>
+<p>E também é possível utilizar aspas simples, duplas e triplas ao mesmo tempo!
+Olha só:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">todas_as_aspas</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Essa é uma string que tem:</span>
+<span class="gp">... </span><span class="s2">- aspas &#39;simples&#39;</span>
+<span class="gp">... </span><span class="s2">- aspas &quot;duplas&quot;</span>
+<span class="gp">... </span><span class="s2">- aspas &#39;&#39;&#39;triplas&#39;&#39;&#39;</span>
+<span class="gp">... </span><span class="s2">Legal né?&quot;&quot;&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">todas_as_aspas</span>
+<span class="go">&#39;Essa é uma string que tem:\n- aspas \&#39;simples\&#39;\n- aspas &quot;duplas&quot;\n- aspas \&#39;\&#39;\&#39;triplas\&#39;\&#39;\&#39;\nLegal né?&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">todas_as_aspas</span><span class="p">)</span>
+<span class="go">Essa é uma string que tem:</span>
+<span class="go">- aspas &#39;simples&#39;</span>
+<span class="go">- aspas &quot;duplas&quot;</span>
+<span class="go">- aspas &#39;&#39;&#39;triplas&#39;&#39;&#39;</span>
+<span class="go">Legal né?</span>
+</pre></div>
+</div>
+<div class="section" id="tamanho">
+<h2>Tamanho<a class="headerlink" href="#tamanho" title="Link permanente para este título">¶</a></h2>
+<p>A função embutida <code class="docutils literal notranslate"><span class="pre">len()</span></code> nos permite, entre outras coisas, saber o
+tamanho de uma <em>string</em>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;Abracadabra&#39;</span><span class="p">)</span>
+<span class="go">11</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">palavras</span> <span class="o">=</span> <span class="s1">&#39;Faz um pull request lá&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">palavras</span><span class="p">)</span>
+<span class="go">22</span>
+</pre></div>
+</div>
+<p>Assim, vemos que a palavra <code class="docutils literal notranslate"><span class="pre">Abracadabra</span></code> tem 11 letras.</p>
+</div>
+<div class="section" id="indices">
+<h2>Índices<a class="headerlink" href="#indices" title="Link permanente para este título">¶</a></h2>
+<p>Como visto anteriormente, o método <code class="docutils literal notranslate"><span class="pre">len()</span></code> pode ser utilizado para obter o
+tamanho de estruturas, sejam elas <em>strings</em>, listas, etc. Esse tamanho
+representa a quantidade de elementos na estrutura.</p>
+<p>Para obter somente um caractere de dentro dessas estruturas, deve-se utilizar
+o acesso por índices, no qual o índice entre colchetes <code class="docutils literal notranslate"><span class="pre">[]</span></code> representa a
+posição do elemento que se deseja acessar.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Os índices começam em zero.</p>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/indices.png"><img alt="_images/indices.png" src="_images/indices.png" style="width: 508.8px; height: 207.20000000000002px;" /></a>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">palavra</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">palavra</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># primeira</span>
+<span class="go">&#39;P&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">palavra</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="c1"># última</span>
+<span class="go">&#39;n&#39;</span>
+</pre></div>
+</div>
+<p>Índices negativos correspondem à percorrer a estrutura (string, lista,
+…) na ordem reversa:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">palavra</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># última também</span>
+<span class="go">&#39;n&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">palavra</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># terceira de tras pra frente</span>
+<span class="go">&#39;h&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="fatias">
+<span id="section-fatias-strings"></span><h2>Fatias<a class="headerlink" href="#fatias" title="Link permanente para este título">¶</a></h2>
+<p>Se, ao invés de obter apenas um elemento de uma estrutura (<em>string</em>, lista,
+…), deseja-se obter múltiplos elementos, deve-se utilizar <em>slicing</em>
+(fatiamento). No lugar de colocar o índice do elemento entre chaves,
+deve-se colocar o índice do primeiro elemento, dois pontos (<code class="docutils literal notranslate"><span class="pre">:</span></code>) e o
+próximo índice do último elemento desejado, tudo entre colchetes. Por
+exemplo:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;Aprender Python é muito divertido!&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">&#39;A&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="go">&#39;d&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span> <span class="c1"># do zero até o antes do 5</span>
+<span class="go">&#39;Apren&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[:]</span> <span class="c1"># tudo!</span>
+<span class="go">&#39;Aprender Python é muito divertido!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span>
+<span class="go">&#39;Aprender Python é muito divertido!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">6</span><span class="p">:]</span> <span class="c1"># Se omitido o segundo índice significa &#39;obter até o final&#39;</span>
+<span class="go">&#39;er Python é muito divertido!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[:</span><span class="mi">6</span><span class="p">]</span> <span class="c1"># se omitido o primeiro indice, significa &#39;obter desde o começo&#39;</span>
+<span class="go">&#39;Aprend&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># funciona com números negativos também</span>
+<span class="go">&#39;render Python é muito diverti&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">5</span><span class="p">]</span>
+<span class="go">&#39;Aprender Python é muito diver&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">6</span><span class="p">]</span>
+<span class="go">&#39;Aprender Python é muito dive&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">7</span><span class="p">]</span>
+<span class="go">&#39;Aprender Python é muito div&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">&#39;render Python é muito divertid&#39;</span>
+</pre></div>
+</div>
+<p>É possível controlar o <em>passo</em> que a fatia usa. Para isso, coloca-se mais
+um dois pontos (<code class="docutils literal notranslate"><span class="pre">:</span></code>) depois do segundo índice e o <em>tamanho do passo</em>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[::</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># do começo, até o fim, de 1 em 1. Ou seja, tudo do jeito que ja era, não faz diferença nenhuma.</span>
+<span class="go">&#39;Aprender Python é muito divertido!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># do começo, até o fim, de 2 em 2</span>
+<span class="go">&#39;Arne yhnémiodvrio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># Do terceiro, até o ante penúltimo, de 2 em dois</span>
+<span class="go">&#39;rne yhnémiodvri&#39;</span>
+</pre></div>
+</div>
+<p>Resumindo: para fazer uma fatia de nossa <em>string</em>, precisamos saber de onde
+começa, até onde vai e o tamanho do passo.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">fatiável</span><span class="p">[</span><span class="n">começo</span> <span class="p">:</span> <span class="n">fim</span> <span class="p">:</span> <span class="n">passo</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>As fatias incluem o índice do primeiro elemento e <em>não incluem</em> o elemento do índice final. Por isso que <code class="docutils literal notranslate"><span class="pre">frase[0:-1]</span></code> perde o último elemento.</p>
+</div>
+<p>Caso o final da fatia seja antes do começo, obtemos um resultado vazio:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">15</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">&#39;&#39;</span>
+</pre></div>
+</div>
+<p>E se quisermos uma fatia fora da string?</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">123</span><span class="p">:</span><span class="mi">345</span><span class="p">]</span>
+<span class="go">&#39;&#39;</span>
+</pre></div>
+</div>
+<p>Mas e se o final da fatia for mais para frente que o tamanho da <em>string</em>? Não
+tem problemas, o Python vai até o onde der:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">8</span><span class="p">:</span><span class="mi">123456789</span><span class="p">]</span>
+<span class="go">&#39; Python é muito divertido!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">8</span><span class="p">:]</span>
+<span class="go">&#39; Python é muito divertido!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">123456789</span><span class="p">]</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">IndexError</span>: <span class="n">string index out of range</span>
+</pre></div>
+</div>
+<p>Tamanhos negativos de passo também funcionam. Passos positivos significam <em>para
+frente</em> e passos negativos significam <em>para trás</em>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Python&quot;</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">&#39;nohtyP&#39;</span>
+</pre></div>
+</div>
+<p>Quando usamos passos negativos, a fatia começa no fim e termina no começo e
+é percorrida ao contrário. Ou seja, invertemos a ordem. Mas tome cuidado:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Python&quot;</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+<span class="go">&#39;thon&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Python&quot;</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">&#39;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Python&quot;</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">&#39;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Python&quot;</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">&#39;noh&#39;</span>
+</pre></div>
+</div>
+<p>No caso de <code class="docutils literal notranslate"><span class="pre">&quot;Python&quot;[6:2]</span></code>, o começo é depois do fim. Por isso a <em>string</em>
+fica vazia.</p>
+<p>No caso de <code class="docutils literal notranslate"><span class="pre">&quot;Python&quot;[2:6:-1]</span></code>, o começo é o índice <code class="docutils literal notranslate"><span class="pre">6</span></code>, o fim é o índice
+<code class="docutils literal notranslate"><span class="pre">2</span></code>, percorrida ao contrário. Ou seja, temos uma <em>string</em> vazia ao
+contrário, que continua vazia.</p>
+<p>Quando fazemos <code class="docutils literal notranslate"><span class="pre">&quot;Python&quot;[6:2:-1]</span></code>, o começo é o índice <code class="docutils literal notranslate"><span class="pre">2</span></code>, o fim é o índice
+<code class="docutils literal notranslate"><span class="pre">6</span></code>, percorrida ao contrário. Lembre que o índice final nunca é incluído.
+Ou seja, temos a <em>string</em> <code class="docutils literal notranslate"><span class="pre">hon</span></code> a ser invertida. O que resulta em <code class="docutils literal notranslate"><span class="pre">noh</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Dica</p>
+<p>Se você quiser fazer uma fatia invertida, ou seja, inverter um trecho de
+uma <em>string</em>, é muito mais fácil fazer primeiro a fatia e depois a
+inversão:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;No alto da montanha havia uma rosa&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">texto</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">19</span><span class="p">]</span>
+<span class="go">&#39;alto da montanha&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">texto</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">19</span><span class="p">][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">&#39;ahnatnom ad otla&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="formatacao-de-strings">
+<h2>Formatação de strings<a class="headerlink" href="#formatacao-de-strings" title="Link permanente para este título">¶</a></h2>
+<p>A formatação de string nos permite criar frases dinâmicas, utilizando
+valores de quaisquer variáveis desejadas. Por exemplo:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">nome</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Digite seu nome &#39;</span><span class="p">)</span>
+<span class="go">Digite seu nome Silvio Santos</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nome</span>
+<span class="go">&#39;Silvio Santos&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span> <span class="o">=</span> <span class="s1">&#39;Olá, </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nome</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span>
+<span class="go">&#39;Olá, Silvio Santos&#39;</span>
+</pre></div>
+</div>
+<p>Vale lembrar que as chaves <code class="docutils literal notranslate"><span class="pre">{}</span></code> só são trocadas pelo valor após a chamada do
+método <code class="docutils literal notranslate"><span class="pre">str.format()</span></code>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">string_a_ser_formatada</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> me formate!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">string_a_ser_formatada</span>
+<span class="go">&#39;{} me formate!&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">string_a_ser_formatada</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Não&quot;</span><span class="p">)</span>  <span class="c1"># também podemos passar valores diretamente para formatação, apesar de ser desncessário</span>
+<span class="go">&#39;Não me formate!&#39;</span>
+</pre></div>
+</div>
+<p>A string a ser formatada não é alterada nesse processo, já que não foi
+feita nenhuma atribuição:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">string_a_ser_formatada</span>
+<span class="go">&#39;{} me formate!&#39;</span>
+</pre></div>
+</div>
+<p>É possível formatar uma quantidade arbitrária de valores:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> x </span><span class="si">{}</span><span class="s1"> = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span>
+<span class="go">&#39;7 x 6 = 42&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">palavra</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numero</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">booleano</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> é </span><span class="si">{}</span><span class="s1">. E as outras linguagens? </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">palavra</span><span class="p">,</span> <span class="n">numero</span><span class="p">,</span> <span class="n">booleano</span><span class="p">)</span>
+<span class="go">&#39;Python é 10. E as outras linguagens? False&#39;</span>
+</pre></div>
+</div>
+<p>Além disso, também é possível usar nomes para identificar quais valores serão
+substituídos:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;</span><span class="si">{a}</span><span class="s1">, </span><span class="si">{a}</span><span class="s1">, </span><span class="si">{a}</span><span class="s1">. </span><span class="si">{b}</span><span class="s1">, </span><span class="si">{b}</span><span class="s1">, </span><span class="si">{b}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="s1">&#39;oi&#39;</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="s1">&#39;tchau&#39;</span><span class="p">)</span>
+<span class="go">&#39;oi, oi, oi. tchau, tchau, tchau&#39;</span>
+</pre></div>
+</div>
+<div class="section" id="alternativa-ao-format">
+<h3>Alternativa ao <cite>.format()</cite><a class="headerlink" href="#alternativa-ao-format" title="Link permanente para este título">¶</a></h3>
+<p>Uma maneira mais recente de formatar strings foi introduzida a partir da versão
+3.6 do Python: <cite>PEP 498 – Literal String Interpolation</cite>, carinhosamente
+conhecida como <cite>fstrings</cite> e funciona da seguinte forma:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;Silvio&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="sa">f</span><span class="s1">&#39;Olá, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">.&#39;</span>
+<span class="go">&#39;Olá, Silvio.&#39;</span>
+</pre></div>
+</div>
+<p>É também possível fazer operações:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="sa">f</span><span class="s1">&#39;4654 * 321 é </span><span class="si">{</span><span class="mi">4654</span> <span class="o">*</span> <span class="mi">321</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="go">&#39;4654 * 321 é 1493934&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="separacao-de-strings">
+<h2>Separação de <em>Strings</em><a class="headerlink" href="#separacao-de-strings" title="Link permanente para este título">¶</a></h2>
+<p>Se tivermos a frase <code class="docutils literal notranslate"><span class="pre">Sílvio</span> <span class="pre">Santos</span> <span class="pre">vem</span> <span class="pre">aí,</span> <span class="pre">oleoleolá!</span></code> e quisermos separar
+cada palavra, como fazer? Pode-se usar o fatiamento:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;Sílvio Santos vem aí, oleoleolá!&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[:</span><span class="mi">6</span><span class="p">]</span>
+<span class="go">&#39;Sílvio&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">13</span><span class="p">]</span>
+<span class="go">&#39;Santos&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">14</span><span class="p">:</span><span class="mi">17</span><span class="p">]</span>
+<span class="go">&#39;vem&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">18</span><span class="p">:</span><span class="mi">21</span><span class="p">]</span>
+<span class="go">&#39;aí,&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="p">[</span><span class="mi">22</span><span class="p">:]</span>
+<span class="go">&#39;oleoleolá!&#39;</span>
+</pre></div>
+</div>
+<p>Mas também podemos usar a função <code class="docutils literal notranslate"><span class="pre">split()</span></code>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="go">[&#39;Sílvio&#39;, &#39;Santos&#39;, &#39;vem&#39;, &#39;aí,&#39;, &#39;oleoleolá!&#39;]</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>É possível transformar uma string em número, dado que seja um número:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numero</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>A volta também é possível:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numero_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mi">1900</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numero_string</span>
+<span class="go">&#39;1900&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">numero_string</span><span class="p">)</span>
+<span class="go">&lt;class &#39;str&#39;&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="exercicios">
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Dada a frase <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">é</span> <span class="pre">muito</span> <span class="pre">legal.</span></code>, use fatiamento para dar nome às
+variáveis contendo cada palavra. O resultado final deve ser:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;Python é muito legal.&quot;</span>
+<span class="go"># resolução do problema aqui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">palavra1</span>
+<span class="go">&quot;Python&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">palavra2</span>
+<span class="go">&quot;é&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">palavra3</span>
+<span class="go">&quot;muito&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">palavra4</span>
+<span class="go">&quot;legal&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Qual o tamanho dessa frase? E qual o tamanho de cada palavra?</p></li>
+<li><p>Agora que conhecemos atribuição múltipla e o método <code class="docutils literal notranslate"><span class="pre">str.split()</span></code>
+refaça os dois exercícios anteriores usando essas técnicas.</p></li>
+<li><p>Use <em>slicing</em> (mais especificamente o passo do fatiamento) para inverter a
+string “Python”.</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="input.html" class="btn btn-neutral float-right" title="Lendo valores do teclado" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="variaveis.html" class="btn btn-neutral float-left" title="Variáveis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2020, (CC BY-NC-SA 4.0) Grupy-Sanca
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

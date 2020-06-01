@@ -1,0 +1,515 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Dicionários &mdash; Curso Introdutório de Python | Grupy-Sanca</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+    <link rel="next" title="Condicionais" href="condicionais.html" />
+    <link rel="prev" title="Listas" href="listas.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Curso Introdutório de Python
+          
+
+          
+            
+            <img src="_static/logo_small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introducao.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sobre_grupy.html">Sobre o grupy-sanca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacao.html">Guia de Instalação do Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacao.html#ambientes-de-desenvolvimento">Ambientes de Desenvolvimento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hello_world.html">Hello World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculadora.html">Python como calculadora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variaveis.html">Variáveis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html"><cite>Strings</cite> (sequência de caracteres)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Lendo valores do teclado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listas.html">Listas</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dicionários</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#declaracao">Declaração</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funcao-dict">Função <code class="docutils literal notranslate"><span class="pre">dict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chaves">Chaves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adicionando-e-removendo-elementos">Adicionando e removendo elementos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funcao-list">Função <code class="docutils literal notranslate"><span class="pre">list()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funcao-len">Função <code class="docutils literal notranslate"><span class="pre">len()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#metodo-get">Método <code class="docutils literal notranslate"><span class="pre">get()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#alguns-metodos">Alguns métodos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ordem-dos-elementos">Ordem dos elementos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#esta-no-dicionario">Está no dicionário?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercicios">Exercícios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="condicionais.html">Condicionais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controle.html">Estruturas de controle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repeticao.html">Estruturas de repetição</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funcoes.html">Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercicios.html">Exercícios e Desafios!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribuidores.html">Contribuidores</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso Introdutório de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Dicionários</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/dicionarios.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dicionarios">
+<span id="section-dicionario"></span><h1>Dicionários<a class="headerlink" href="#dicionarios" title="Link permanente para este título">¶</a></h1>
+<p>Dicionário é uma coleção de itens (chamados <cite>chaves</cite>) e seus respectivos significados (chamados de <cite>valores</cite>):</p>
+<blockquote>
+<div><p>{chave: valor}</p>
+</div></blockquote>
+<p>Cada chave do dicionário deve ser única! Ao contrário de <em>listas</em>, <em>dicionários</em>, não podem ter chaves repetidas.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>As chaves devem ser únicas.</p>
+</div>
+<div class="section" id="declaracao">
+<h2>Declaração<a class="headerlink" href="#declaracao" title="Link permanente para este título">¶</a></h2>
+<p>Declaramos um dicionário colocando entre colchetes <code class="docutils literal notranslate"><span class="pre">{}</span></code> cada chave e o seu respectivo valor, da seguinte forma:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">telefones</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ana&quot;</span><span class="p">:</span> <span class="mi">123456</span><span class="p">,</span> <span class="s2">&quot;yudi&quot;</span><span class="p">:</span> <span class="mi">40028922</span><span class="p">,</span> <span class="s2">&quot;julia&quot;</span><span class="p">:</span> <span class="mi">4124492</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">telefones</span>
+<span class="go">{&#39;ana&#39;: 123456, &#39;yudi&#39;: 40028922, &#39;julia&#39;: 4124492}</span>
+</pre></div>
+</div>
+<p>No caso acima, a chave <code class="docutils literal notranslate"><span class="pre">&quot;ana&quot;</span></code>, por exemplo, está relacionada ao valor <code class="docutils literal notranslate"><span class="pre">123456</span></code>. Cada par chave-valor é separado por uma vírgula <code class="docutils literal notranslate"><span class="pre">,</span></code> .</p>
+</div>
+<div class="section" id="funcao-dict">
+<h2>Função <code class="docutils literal notranslate"><span class="pre">dict()</span></code><a class="headerlink" href="#funcao-dict" title="Link permanente para este título">¶</a></h2>
+<p>A função <code class="docutils literal notranslate"><span class="pre">dict()</span></code> constrói um dicionário. Existem algumas formas de usá-la:</p>
+<ul>
+<li><p>Com uma lista de listas:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lista1</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;brigadeiro&quot;</span><span class="p">,</span> <span class="s2">&quot;leite condesado, achocolatado&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lista2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;omelete&quot;</span><span class="p">,</span> <span class="s2">&quot;ovos, azeite, condimentos a gosto&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lista3</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ovo frito&quot;</span><span class="p">,</span> <span class="s2">&quot;ovo, óleo, condimentos a gosto&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lista_receitas</span> <span class="o">=</span> <span class="p">[</span><span class="n">lista1</span><span class="p">,</span> <span class="n">lista2</span><span class="p">,</span> <span class="n">lista3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">lista_receitas</span><span class="p">)</span>
+<span class="go">[[&#39;brigadeiro&#39;, &#39;leite condesado, achocolatado&#39;], [&#39;omelete&#39;, &#39;ovos, azeite, condimentos a gosto&#39;], [&#39;ovo frito&#39;, &#39;ovo, óleo, condimentos a gosto&#39;]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">receitas</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">lista_receitas</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">receitas</span><span class="p">)</span>
+<span class="go">{&#39;brigadeiro&#39;: &#39;leite condesado, achocolatado&#39;, &#39;omelete&#39;: &#39;ovos, azeite, condimentos a gosto&#39;, &#39;ovo frito&#39;: &#39;ovo, óleo, condimentos a gosto&#39;}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Atribuindo os valores diretamente:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">constantes</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">pi</span><span class="o">=</span><span class="mf">3.14</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="mf">2.7</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">137</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">constantes</span><span class="p">)</span>
+<span class="go">{&#39;pi&#39;: 3.14, &#39;e&#39;: 2.7, &#39;alpha&#39;: 0.0072992700729927005}</span>
+</pre></div>
+</div>
+<p>Neste caso, o nome das chaves deve ser um identificador válido. As mesmas regras de <a class="reference internal" href="variaveis.html#section-nomes-variaveis"><span class="std std-ref">nomes de variáveis</span></a> se aplicam.</p>
+</li>
+<li><p>Usando as chaves <code class="docutils literal notranslate"><span class="pre">{}</span></code>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numerinhos</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">({</span><span class="s2">&quot;um&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;dois&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;três&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">numerinhos</span><span class="p">)</span>
+<span class="go">{&#39;um&#39;: 1, &#39;dois&#39;: 2, &#39;três&#39;: 3}</span>
+</pre></div>
+</div>
+<p>E nesse caso se não houvesse a função <cite>dict()</cite>, o resultado seria exatamente o mesmo…</p>
+</li>
+</ul>
+</div>
+<div class="section" id="chaves">
+<h2>Chaves<a class="headerlink" href="#chaves" title="Link permanente para este título">¶</a></h2>
+<p>Acessamos um determinado valor do dicionário através de sua chave:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">capitais</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;SP&quot;</span><span class="p">:</span> <span class="s2">&quot;São Paulo&quot;</span><span class="p">,</span> <span class="s2">&quot;AC&quot;</span><span class="p">:</span> <span class="s2">&quot;Rio Branco&quot;</span><span class="p">,</span> <span class="s2">&quot;TO&quot;</span><span class="p">:</span> <span class="s2">&quot;Palmas&quot;</span><span class="p">,</span> <span class="s2">&quot;RJ&quot;</span><span class="p">:</span> <span class="s2">&quot;Rio de Janeiro&quot;</span><span class="p">,</span> <span class="s2">&quot;SE&quot;</span><span class="p">:</span> <span class="s2">&quot;Aracaju&quot;</span><span class="p">,</span> <span class="s2">&quot;MG&quot;</span><span class="p">:</span> <span class="s2">&quot;Belo Horizonte&quot;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">capitais</span><span class="p">[</span><span class="s2">&quot;MG&quot;</span><span class="p">]</span>
+<span class="go">&#39;Belo Horizonte&#39;</span>
+</pre></div>
+</div>
+<p>Até o momento, usamos apenas <em>strings</em>, mas podemos colocar todo tipo de coisa dentro dos dicionários, incluindo listas e até mesmo outros dicionários:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numeros</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;primos&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="s2">&quot;pares&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s2">&quot;ímpares&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numeros</span><span class="p">[</span><span class="s2">&quot;ímpares&quot;</span><span class="p">]</span>
+<span class="go">[1, 3, 5]</span>
+</pre></div>
+</div>
+<p>Mesmo que os pares chave-valor estejam organizados na ordem que foram colocados, não podemos acessá-los por <em>índices</em> como faríamos em listas:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numeros</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">KeyError</span>: <span class="n">2</span>
+</pre></div>
+</div>
+<p>O mesmo erro ocorre se tentarmos colocar uma chave que não pertence ao dicionário:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numeros</span><span class="p">[</span><span class="s2">&quot;negativos&quot;</span><span class="p">]</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">KeyError</span>: <span class="n">&#39;negativos&#39;</span>
+</pre></div>
+</div>
+<p>Assim como os valores não precisam ser do tipo <em>string</em>, o mesmo vale para as chaves:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numeros_por_extenso</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;dois&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;um&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;três&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;zero&quot;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numeros_por_extenso</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">&#39;zero&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numeros_por_extenso</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">&#39;dois&#39;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Listas e outros dicionários <em>não</em> podem ser usados como chaves por serem de tipos <em>mutáveis</em>.</p>
+</div>
+</div>
+<div class="section" id="adicionando-e-removendo-elementos">
+<h2>Adicionando e removendo elementos<a class="headerlink" href="#adicionando-e-removendo-elementos" title="Link permanente para este título">¶</a></h2>
+<p>Podemos alterar o valor relacionado a uma chave da seguinte forma:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pessoa</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Cleiton&quot;</span><span class="p">,</span> <span class="s2">&quot;idade&quot;</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span> <span class="s2">&quot;família&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;mãe&quot;</span><span class="p">:</span> <span class="s2">&quot;Maria&quot;</span><span class="p">,</span> <span class="s2">&quot;pai&quot;</span><span class="p">:</span> <span class="s2">&quot;Enzo&quot;</span><span class="p">}}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pessoa</span><span class="p">[</span><span class="s2">&quot;idade&quot;</span><span class="p">]</span>
+<span class="go">34</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pessoa</span><span class="p">[</span><span class="s2">&quot;idade&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pessoa</span><span class="p">[</span><span class="s2">&quot;idade&quot;</span><span class="p">]</span>
+<span class="go">35</span>
+</pre></div>
+</div>
+<p>Para adicionar um elemento novo à um dicionário, podemos simplesmente fazer o seguinte:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">meses</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Janeiro&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;Fevereiro&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;Março&quot;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">meses</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Abril&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">meses</span>
+<span class="go">{1: &quot;Janeiro&quot;, 2: &quot;Fevereiro&quot;, 3: &quot;Março&quot;, 4: &quot;Abril&quot;}</span>
+</pre></div>
+</div>
+<p>Aqui nos referimos a uma chave que <em>não</em> está no dicionário e associamos um valor a ela. Desta forma, <em>adicionando</em> esse conjunto chave-valor ao dicionário.</p>
+<p>Removemos um conjunto chave-elemento de um dicionário com o comando <code class="docutils literal notranslate"><span class="pre">`del`</span></code>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">meses</span>
+<span class="go">{1: &quot;Janeiro&quot;, 2: &quot;Fevereiro&quot;, 3: &quot;Março&quot;, 4: &quot;Abril&quot;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">del</span><span class="p">(</span><span class="n">meses</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">meses</span>
+<span class="go">{1: &quot;Janeiro&quot;, 2: &quot;Fevereiro&quot;, 3: &quot;Março&quot;}</span>
+</pre></div>
+</div>
+<p>Para apagar <em>todos</em> os elementos de um dicionário, usamos o método <code class="docutils literal notranslate"><span class="pre">clear</span></code>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lixo</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;plástico&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;garrafa&quot;</span><span class="p">,</span> <span class="s2">&quot;copinho&quot;</span><span class="p">,</span> <span class="s2">&quot;canudo&quot;</span><span class="p">],</span> <span class="s2">&quot;papel&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;folha amassada&quot;</span><span class="p">,</span> <span class="s2">&quot;guardanapo&quot;</span><span class="p">],</span> <span class="s2">&quot;orgânico&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;batata&quot;</span><span class="p">,</span> <span class="s2">&quot;resto do bandeco&quot;</span><span class="p">,</span> <span class="s2">&quot;casca de banana&quot;</span><span class="p">]}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lixo</span>
+<span class="go">{&quot;plástico&quot;: [&quot;garrafa&quot;, &quot;copinho&quot;, &quot;canudo&quot;], &quot;papel&quot;: [&quot;folha amassada&quot;, &quot;guardanapo&quot;], &quot;organico&quot;: [&quot;batata&quot;, &quot;resto do bandeco&quot;, &quot;casca de banana&quot;]}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lixo</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lixo</span>
+<span class="go">{}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="funcao-list">
+<h2>Função <code class="docutils literal notranslate"><span class="pre">list()</span></code><a class="headerlink" href="#funcao-list" title="Link permanente para este título">¶</a></h2>
+<p>A função <code class="docutils literal notranslate"><span class="pre">list()</span></code> recebe um conjunto de objetos e retorna uma lista. Ao passar um dicionário, ela retorna uma lista contendo todas as suas <em>chaves</em>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">institutos_uspsc</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;IFSC&quot;</span><span class="p">:</span> <span class="s2">&quot;Instituto de Física de São Carlos&quot;</span><span class="p">,</span> <span class="s2">&quot;ICMC&quot;</span><span class="p">:</span> <span class="s2">&quot;Instituto de Ciências Matemáticas e de Computação&quot;</span><span class="p">,</span> <span class="s2">&quot;EESC&quot;</span><span class="p">:</span> <span class="s2">&quot;Escola de Engenharia de São Carlos&quot;</span><span class="p">,</span> <span class="s2">&quot;IAU&quot;</span><span class="p">:</span> <span class="s2">&quot;Instituto de Arquitetura e Urbanismo&quot;</span><span class="p">,</span> <span class="s2">&quot;IQSC&quot;</span><span class="p">:</span> <span class="s2">&quot;Instituto de Química de São Carlos&quot;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">institutos_uspsc</span><span class="p">)</span>
+<span class="go">[&#39;IQSC&#39;, &#39;IFSC&#39;, &#39;ICMC&#39;, &#39;IAU&#39;, &#39;EESC&#39;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="funcao-len">
+<h2>Função <code class="docutils literal notranslate"><span class="pre">len()</span></code><a class="headerlink" href="#funcao-len" title="Link permanente para este título">¶</a></h2>
+<p>A função <code class="docutils literal notranslate"><span class="pre">len()</span></code> retorna o número de elementos (“tamanho”) do objeto passado para ela. No caso de uma lista, fala quantos elementos há. No caso de dicionários, retorna o <em>número de chaves</em> contidas nele:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">institutos_uspsc</span>
+<span class="go">{&#39;IQSC&#39;: &#39;Instituto de Química de São Carlos&#39;, &#39;IFSC&#39;: &#39;Instituto de Física de São Carlos&#39;, &#39;ICMC&#39;: &#39;Instituto de Ciências Matemáticas e de Computação&#39;, &#39;IAU&#39;: &#39;Instituto de Arquitetura e Urbanismo&#39;, &#39;EESC&#39;: &#39;Escola de Engenharia de São Carlos&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">institutos_uspsc</span><span class="p">)</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<p>Você pode contar o número de elementos na lista gerada pela função <code class="docutils literal notranslate"><span class="pre">list()</span></code> para conferir:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">institutos_uspsc</span><span class="p">))</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="metodo-get">
+<h2>Método <code class="docutils literal notranslate"><span class="pre">get()</span></code><a class="headerlink" href="#metodo-get" title="Link permanente para este título">¶</a></h2>
+<p>O método <cite>get(chave, valor)</cite> pode ser usado para retornar o valor associado à respectiva chave! O segundo parâmetro <cite>&lt;valor&gt;</cite> é opcional e indica o que será retornado caso a chave desejada <em>não</em> esteja no dicionário:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">institutos_uspsc</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;IFSC&quot;</span><span class="p">)</span>
+<span class="go">&#39;Instituto de Física de São Carlos&#39;</span>
+</pre></div>
+</div>
+<p>Dá para ver que ele é muito parecido com fazer assim:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">institutos_uspsc</span><span class="p">[</span><span class="s2">&quot;IFSC&quot;</span><span class="p">]</span>
+<span class="go">&#39;Instituto de Física de São Carlos&#39;</span>
+</pre></div>
+</div>
+<p>Mas ao colocarmos uma chave que não está no dicionário:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">institutos_uspsc</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Poli&quot;</span><span class="p">,</span> <span class="s2">&quot;Não tem!&quot;</span><span class="p">)</span>
+<span class="go">&#39;Não tem!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">institutos_uspsc</span><span class="p">[</span><span class="s2">&quot;Poli&quot;</span><span class="p">]</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">KeyError</span>: <span class="n">&#39;Poli&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="alguns-metodos">
+<h2>Alguns métodos<a class="headerlink" href="#alguns-metodos" title="Link permanente para este título">¶</a></h2>
+<ul>
+<li><p>O método <code class="docutils literal notranslate"><span class="pre">items()</span></code> pode ser comparado com o <em>inverso</em> da função <code class="docutils literal notranslate"><span class="pre">dict()</span></code>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pessoa</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Enzo&quot;</span><span class="p">,</span> <span class="s2">&quot;RA&quot;</span><span class="p">:</span> <span class="mi">242334</span><span class="p">,</span> <span class="s2">&quot;curso&quot;</span><span class="p">:</span> <span class="s2">&quot;fiscomp&quot;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pessoa</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+<span class="go">dict_items([(&#39;curso&#39;, &#39;fiscomp&#39;), (&#39;nome&#39;, &#39;Enzo&#39;), (&#39;RA&#39;, 242334)])</span>
+</pre></div>
+</div>
+<p>Usando a função <code class="docutils literal notranslate"><span class="pre">list()</span></code> nesse resultado, obtemos:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="go">  &gt;&gt;&gt; pessoa.items()</span>
+<span class="go">  dict_items([(&#39;curso&#39;, &#39;fiscomp&#39;), (&#39;nome&#39;, &#39;Enzo&#39;), (&#39;RA&#39;, 242334)])</span>
+<span class="go">  &gt;&gt;&gt; itens = list(pessoa.items())</span>
+<span class="go">  &gt;&gt;&gt; itens</span>
+<span class="go">  [(&#39;curso&#39;, &#39;fiscomp&#39;), (&#39;nome&#39;, &#39;Enzo&#39;), (&#39;RA&#39;, 242334)]</span>
+
+<span class="go">Experimente usar a função ``dict()`` na lista ``itens``!</span>
+</pre></div>
+</div>
+</li>
+<li><p>O método <code class="docutils literal notranslate"><span class="pre">values()</span></code> nos retorna os <em>valores</em> do dicionário:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pessoa</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+<span class="go">dict_values([&#39;fiscomp&#39;, &#39;Enzo&#39;, 242334])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">valores</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">pessoa</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">valores</span>
+<span class="go">[&#39;fiscomp&#39;, &#39;Enzo&#39;, 242334]</span>
+</pre></div>
+</div>
+</li>
+<li><p>O método <code class="docutils literal notranslate"><span class="pre">keys()</span></code> nos retorna as <em>chaves</em> do dicionário:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pessoa</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="go">dict_keys([&#39;curso&#39;, &#39;nome&#39;, &#39;RA&#39;])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">chaves</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">pessoa</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">chaves</span>
+<span class="go">[&#39;curso&#39;, &#39;nome&#39;, &#39;RA&#39;]</span>
+</pre></div>
+</div>
+<p>Repare que nesse último obtemos o mesmo que se tivéssemos usado a função <code class="docutils literal notranslate"><span class="pre">list()</span></code>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">pessoa</span><span class="p">)</span>
+<span class="go">[&#39;curso&#39;, &#39;nome&#39;, &#39;RA&#39;]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="ordem-dos-elementos">
+<h2>Ordem dos elementos<a class="headerlink" href="#ordem-dos-elementos" title="Link permanente para este título">¶</a></h2>
+<p>Dicionários não tem sequência dos seus elementos. As listas têm. Dicionários mapeiam um valor a uma chave. Veja este exemplo:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numerinhos</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">({</span><span class="s2">&quot;um&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;dois&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;três&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numeritos</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;três&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;dois&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;um&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numerinhos</span> <span class="o">==</span> <span class="n">numeritos</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numeritos</span>
+<span class="go">{&#39;três&#39;: 3, &#39;dois&#39;: 2, &#39;um&#39;: 1}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numerinhos</span>
+<span class="go">{&#39;um&#39;: 1, &#39;dois&#39;: 2, &#39;três&#39;: 3}</span>
+</pre></div>
+</div>
+<p>Vemos que <code class="docutils literal notranslate"><span class="pre">numerinhos</span></code> e <code class="docutils literal notranslate"><span class="pre">numeritos</span></code> têm as mesmas chaves com os mesmos valores e por isso são iguais. Mas quando imprimimos cada um, a ordem que aparece é a que os itens foram inseridos.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>A partir da versão 3.7 do Python, a ordem das chaves no dicionário é
+garantida como sendo a ordem de inserção.</p>
+</div>
+</div>
+<div class="section" id="esta-no-dicionario">
+<h2>Está no dicionário?<a class="headerlink" href="#esta-no-dicionario" title="Link permanente para este título">¶</a></h2>
+<p>Podemos checar se uma chave está ou não em um dicionário utilizando o comando <code class="docutils literal notranslate"><span class="pre">in</span></code>.
+Voltando para o dicionário que contem os institutos da USP São Carlos:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">institutos_uspsc</span>
+<span class="go">{&#39;IQSC&#39;: &#39;Instituto de Química de São Carlos&#39;, &#39;IFSC&#39;: &#39;Instituto de Física de São Carlos&#39;, &#39;ICMC&#39;: &#39;Instituto de Ciências Matemáticas e de Computação&#39;, &#39;IAU&#39;: &#39;Instituto de Arquitetura e Urbanismo&#39;, &#39;EESC&#39;: &#39;Escola de Engenharia de São Carlos&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;IFSC&quot;</span> <span class="ow">in</span> <span class="n">institutos_uspsc</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;ESALQ&quot;</span> <span class="ow">in</span> <span class="n">institutos_uspsc</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>E checamos se uma chave <em>não está</em> no dicionário com o comando <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">institutos_uspsc</span>
+<span class="go">{&#39;IQSC&#39;: &#39;Instituto de Química de São Carlos&#39;, &#39;IFSC&#39;: &#39;Instituto de Física de São Carlos&#39;, &#39;ICMC&#39;: &#39;Instituto de Ciências Matemáticas e de Computação&#39;, &#39;IAU&#39;: &#39;Instituto de Arquitetura e Urbanismo&#39;, &#39;EESC&#39;: &#39;Escola de Engenharia de São Carlos&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;IFSC&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">institutos_uspsc</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;ESALQ&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">institutos_uspsc</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercicios">
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Faça um dicionário com as 5 pessoas mais perto de você, tendo o nome como chave e a cor da camisa que está usando como valor.</p></li>
+<li><p>Crie um dicionário vazio <code class="docutils literal notranslate"><span class="pre">semana</span> <span class="pre">=</span> <span class="pre">{}</span></code> e o complete com uma chave para cada dia da semana, tendo como seu valor uma lista com as aulas que você tem nesse dia (sábado e domingo recebem listas vazias, ou você tem aula?).</p></li>
+<li><p>Crie um dicionário vazio <code class="docutils literal notranslate"><span class="pre">filmes</span> <span class="pre">=</span> <span class="pre">{}</span></code>. Utilize o nome de um filme como chave. E, como valor, <em>outro</em> dicionário contendo o <code class="docutils literal notranslate"><span class="pre">vilão</span></code> e o <code class="docutils literal notranslate"><span class="pre">ano</span></code> em que o filme foi lançado. Preencha 5 filmes.</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="condicionais.html" class="btn btn-neutral float-right" title="Condicionais" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="listas.html" class="btn btn-neutral float-left" title="Listas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2020, (CC BY-NC-SA 4.0) Grupy-Sanca
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

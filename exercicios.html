@@ -1,0 +1,835 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Exercícios e Desafios! &mdash; Curso Introdutório de Python | Grupy-Sanca</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+    <link rel="next" title="Contribuidores" href="contribuidores.html" />
+    <link rel="prev" title="Funções" href="funcoes.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Curso Introdutório de Python
+          
+
+          
+            
+            <img src="_static/logo_small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introducao.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sobre_grupy.html">Sobre o grupy-sanca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacao.html">Guia de Instalação do Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacao.html#ambientes-de-desenvolvimento">Ambientes de Desenvolvimento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hello_world.html">Hello World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculadora.html">Python como calculadora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variaveis.html">Variáveis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html"><cite>Strings</cite> (sequência de caracteres)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Lendo valores do teclado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listas.html">Listas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicionarios.html">Dicionários</a></li>
+<li class="toctree-l1"><a class="reference internal" href="condicionais.html">Condicionais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controle.html">Estruturas de controle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repeticao.html">Estruturas de repetição</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funcoes.html">Funções</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Exercícios e Desafios!</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#calculadora">Calculadora</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#operadores-matematicos">Operadores Matemáticos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expressoes-numericas">Expressões Numéricas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#variaveis">Variáveis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#desafios">Desafios</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#strings">Strings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Desafios</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#teclado">Teclado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#listas">Listas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dicionarios">Dicionários</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#estruturas-de-controle">Estruturas de Controle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Desafios</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#estruturas-de-repeticao">Estruturas de repetição</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funcoes">Funções</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contribuidores.html">Contribuidores</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso Introdutório de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Exercícios e Desafios!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/exercicios.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="exercicios-e-desafios">
+<h1>Exercícios e Desafios!<a class="headerlink" href="#exercicios-e-desafios" title="Link permanente para este título">¶</a></h1>
+<p>Neste capítulo estão listados todos os exercícios apresentados no curso e
+também alguns desafios a mais!</p>
+<div class="section" id="calculadora">
+<h2>Calculadora<a class="headerlink" href="#calculadora" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="operadores-matematicos">
+<h3>Operadores Matemáticos<a class="headerlink" href="#operadores-matematicos" title="Link permanente para este título">¶</a></h3>
+<ol class="arabic">
+<li><p>Calcule o resto da divisão de 10 por 3.</p></li>
+<li><p>Calcule a tabuada do 13.</p></li>
+<li><p>Davinir não gosta de ir às aulas. Mas ele é obrigado a comparecer a pelo
+menos 75% delas. Ele quer saber quantas aulas pode faltar, sabendo que tem
+duas aulas por semana, durante quatro meses. Ajude o Davinir!</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Um mês tem quatro semanas.</p>
+</div>
+</li>
+<li><p>Calcule a área de um círculo de raio <span class="math notranslate nohighlight">\(r = 2\)</span>.</p>
+<p>Lembrete: a área de um círculo de raio <span class="math notranslate nohighlight">\(r\)</span> é:</p>
+<div class="math notranslate nohighlight">
+\[A_\circ = \pi \, r^2\]</div>
+</li>
+</ol>
+</div>
+<div class="section" id="expressoes-numericas">
+<h3>Expressões Numéricas<a class="headerlink" href="#expressoes-numericas" title="Link permanente para este título">¶</a></h3>
+<ol class="arabic">
+<li><p>Quantos segundos há em 3 horas, 23 minutos e 17 segundos?</p></li>
+<li><p>Se você correr 65 quilômetros em 3 horas, 23 minutos e 17 segundos, qual
+é a sua velocidade média em m/s?</p></li>
+<li><p>Resolva essa expressão:</p>
+<div class="math notranslate nohighlight">
+\[\frac{100 - 413 \cdot (20 - 5 \times 4)}{5}\]</div>
+</li>
+<li><p>Enivaldo quer ligar três capacitores, de valores:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(C_1 = 10  \, \mu F\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(C_2 = 22  \, \mu F\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(C_3 =  6.8\, \mu F\)</span></p></li>
+</ul>
+<p>Se ele ligar os três em paralelo, a capacitância resultante é a soma:</p>
+<div class="math notranslate nohighlight">
+\[C_p = C_1 + C_2 + C_3\]</div>
+<p>Se ele ligar os três em série, a capacitância resultante é:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{C_s} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3}\]</div>
+<p>Ou seja:</p>
+<div class="math notranslate nohighlight">
+\[C_s = \frac{1}{\frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3}}\]</div>
+<p>Qual é o valor resultante em cada um desses casos?</p>
+</li>
+<li><p>Você e os outros integrantes da sua república (Joca, Moacir, Demival e
+Jackson) foram no supermercado e compraram alguns itens:</p>
+<ul class="simple">
+<li><p>75 latas de cerveja: R$ 2,20 cada (da ruim ainda, pra fazer o dinheiro render)</p></li>
+<li><p>2 pacotes de macarrão: R$ 8,73 cada</p></li>
+<li><p>1 pacote de Molho de tomate: R$ 3,45</p></li>
+<li><p>420g Cebola: R$ 5,40/kg</p></li>
+<li><p>250g de Alho: R$ 30/kg</p></li>
+<li><p>450g de pães franceses: R$ 25/kg</p></li>
+</ul>
+<p>Calcule quanto ficou para cada um.</p>
+</li>
+<li><p>Krissia gosta de bolinhas de queijo. Ela quer saber quantas bolinhas de
+queijo dá para colocar dentro de um pote de sorvete de <span class="math notranslate nohighlight">\(2\, L\)</span>. Ela
+pensou assim:</p>
+<blockquote>
+<div><p><em>Um pote de sorvete tem dimensões 15 cm x 10 cm x 13 cm.
+Uma bolinha de queijo é uma esfera de raio r = 1.2 cm.
+O fator de empacotamento ideal é 0.74, mas o pote de sorvete tem
+tamanho comparável às bolinhas de queijo, aí tem efeitos de borda, então
+o fator deve ser menor. Mas as bolinhas de queijo são razoavelmente
+elásticas, então empacota mais. Esse valor parece razoável.</em></p>
+</div></blockquote>
+<p>Sabendo que o volume de uma esfera de raio <span class="math notranslate nohighlight">\(r\)</span> é
+<span class="math notranslate nohighlight">\(V = \frac{4}{3} \pi r^3\)</span>, o volume do pote de sorvete é
+<span class="math notranslate nohighlight">\(V = x \cdot y \cdot z\)</span> e o fator de empacotamento é a fração de volume
+ocupado pelas bolinhas de queijo. Ou seja, <span class="math notranslate nohighlight">\(74 \%\)</span> do pote de sorvete
+vai ser ocupado pelas bolinhas de queijo.</p>
+<p>Ajude a Krissia descobrir quantas bolinhas de queijo cabem no pote de sorvete!</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="variaveis">
+<h2>Variáveis<a class="headerlink" href="#variaveis" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Supondo que a cotação do dólar esteja em <span class="math notranslate nohighlight">\(\mathrm{R}\$\, 3{,}25\)</span>,
+salve esse valor em uma variável e utilize-o para calcular quanto você
+teria ao cambiar <span class="math notranslate nohighlight">\(\mathrm{R}\$\, 65{,}00\)</span> para dólares.</p></li>
+<li><p>Abelindo é um professor muito malvado. Ele quer decidir como reprovar
+Rondinelly, que tirou 8.66, 5.35, 5 e 1, respectivamente, nas provas
+P1, P2, P3 e P4. Para isso, ele pode calcular a nota final usando média
+aritmética (M.A.), média geométrica (M.G.) ou média harmônica (M.H.).</p>
+<div class="math notranslate nohighlight">
+\[M.A. = \frac{P_1 + P_2 + P_3 + P_4}{4}\]</div>
+<div class="math notranslate nohighlight">
+\[M.G. = \sqrt[4]{|P_1 P_2 P_3 P_4|}\]</div>
+<div class="math notranslate nohighlight">
+\[M.H. = \frac{4}{\frac{1}{P_1} + \frac{1}{P_2} + \frac{1}{P_3} + \frac{1}{P_4}}\]</div>
+<p>Qual dessas médias dá a maior nota pra Rondinelly? E qual das médias dá
+a pior nota?</p>
+</li>
+<li><p>Josefson deseja fazer compras na China. Ela quer comprar
+um celular de <span class="math notranslate nohighlight">\(\mathrm{USD}\, 299{,}99\)</span>,
+uma chaleira de <span class="math notranslate nohighlight">\(\mathrm{USD}\, 23{,}87\)</span>,
+um gnomo de jardim de <span class="math notranslate nohighlight">\(\mathrm{USD}\, 66{,}66\)</span> e
+6 adesivos de unicórnio de <span class="math notranslate nohighlight">\(\mathrm{USD}\, 1{,}42\)</span> cada um. O frete
+de tudo isso para a cidade de Rolândia, no Paraná, ficou em
+<span class="math notranslate nohighlight">\(\mathrm{USD}\, 12{,}34\)</span>.</p>
+<ol class="loweralpha simple">
+<li><p>Calcule o valor total da compra em dólares.</p></li>
+<li><p>Usando o mesmo valor do dólar do exercício anterior, calcule o preço
+final em Reais. Lembre-se que o valor do <em>IOF</em> é de <span class="math notranslate nohighlight">\(6{,}38 \, \%\)</span>.</p></li>
+<li><p>Quanto ela pagou apenas de <em>IOF</em>?</p></li>
+</ol>
+</li>
+</ol>
+<div class="section" id="desafios">
+<h3>Desafios<a class="headerlink" href="#desafios" title="Link permanente para este título">¶</a></h3>
+<ol class="arabic">
+<li><p>Joilson está aprendendo Arduino. Ele quer ligar LEDs nas saídas digitais
+do Arduino. Cada pino fornece <span class="math notranslate nohighlight">\(5\, V\)</span>. Joilson sabe que tem que ligar
+um resistor em série com o LED para não queimar. Calcule o valor do
+resistor que deve ser ligado para cada um desses LEDs, sabendo que a corrente
+de operação de cada um dos LEDs é de <span class="math notranslate nohighlight">\(20\, mA\)</span>:</p>
+<ul class="simple">
+<li><p>LED vermelho: opera em <span class="math notranslate nohighlight">\(2.0\, V\)</span></p></li>
+<li><p>LED verde: opera em <span class="math notranslate nohighlight">\(3.2\, V\)</span></p></li>
+<li><p>LED roxo: opera em <span class="math notranslate nohighlight">\(3.7\, V\)</span></p></li>
+</ul>
+<p>Lembre-se que a voltagem é a corrente multiplicada pela resistência:</p>
+<div class="math notranslate nohighlight">
+\[V = R I\]</div>
+</li>
+<li><p>D3yver50n resolveu minerar criptomoedas. Ele decidiu minerar <em>Ethereum</em> e viu
+que <span class="math notranslate nohighlight">\(1\, ETH = \$687.86\)</span> e <span class="math notranslate nohighlight">\(\$1 = \mathbb{R}\$3.59\)</span>. Ele comprou
+o seguinte computador:</p>
+<ul class="simple">
+<li><p>5 placas de vídeo: GTX1080 TI, cada uma por R$5270,90</p></li>
+<li><p>1 placa mãe: ASRock H110 Pro, por R$920</p></li>
+<li><p>1 fonte: 1600 W, por R$2299,90</p></li>
+<li><p>1 HD: 1 TB, SATA3, 7200 RPM por R$208,90</p></li>
+<li><p>2 pentes de memória: 4 GB, DDR4, 2400 MHZ, cada um por R$259,90</p></li>
+<li><p>1 CPU: Intel Core i5-8500 por R$899,90</p></li>
+</ul>
+<p>E resolveu montar usando uma estante de madeira e dois tijolos, para refrigerar
+melhor:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/cluster.jpg"><img alt="_images/cluster.jpg" src="_images/cluster.jpg" style="width: 70%;" /></a>
+</div>
+<p>Essas GPUs (placas de vídeo) conseguem minerar Ethereum a uma taxa de <span class="math notranslate nohighlight">\(\approx 27 Mh/s\)</span>
+(mega hash / s = <span class="math notranslate nohighlight">\(10^6\)</span> hash / s). Cada bloco minerado dá uma recompensa
+de 3 ETH. Considere a dificuldade da rede de <span class="math notranslate nohighlight">\(3.29 \cdot 10^{15}\)</span>,
+o <em>block time</em> médio de <span class="math notranslate nohighlight">\(15.44\, s\)</span>.</p>
+<p>Para calcular quantos dólares por segundo ele vai ganhar com esse computador,
+D3yver50n fez as seguintes contas:</p>
+<div class="math notranslate nohighlight">
+\[ETH / s = \mathrm{cluster\_ratio} \frac{recompensa}{\mathrm{block\_time}}\]</div>
+<p>O cluster_ratio é calculado como:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{cluster\_ratio} = n_\mathrm{GPU} \frac{\mathrm{GPU\_hashrate}}{\mathrm{network\_hashrate}}\]</div>
+<p>onde <span class="math notranslate nohighlight">\(n_\mathrm{GPU}\)</span> é o número de placas de vídeo que ele tem.
+O network_hashrate é calculado como:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{network\_hashrate} = \frac{\mathrm{dificuldade}}{\mathrm{block\_time}}\]</div>
+<ol class="loweralpha simple">
+<li><p>Calcule quantos ETH por segundo D3yver50n vai ganhar com esse PC.</p></li>
+<li><p>Calcule quantos dólares por segundo ele vai ganhar.</p></li>
+<li><p>Calcule quanto ele vai pagar de energia elétrica por segundo para manter
+esse computador ligado, sabendo que o custo de energia elétrica é de
+<span class="math notranslate nohighlight">\(0.008 \mathrm{ centavos} / kW\)</span>.</p></li>
+<li><p>Após um mês, quantos ETH ele vai ganhar? Isso equivale a quantos reais?
+Quanto de energia elétrica ele vai gastar? Deu lucro ou prejuízo?</p></li>
+<li><p>Se ele teve lucro, após quanto tempo ele ganha o dinheiro que investiu
+no computador de volta?</p></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="strings">
+<h2>Strings<a class="headerlink" href="#strings" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Dada a frase <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">é</span> <span class="pre">muito</span> <span class="pre">legal.</span></code>, use fatiamento para dar nome às
+variáveis contendo cada palavra. O resultado final deve ser:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;Python é muito legal.&quot;</span>
+<span class="go"># resolução do problema aqui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">palavra1</span>
+<span class="go">&quot;Python&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">palavra2</span>
+<span class="go">&quot;é&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">palavra3</span>
+<span class="go">&quot;muito&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">palavra4</span>
+<span class="go">&quot;legal&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Qual o tamanho dessa frase? E qual o tamanho de cada palavra?</p></li>
+<li><p>Agora que conhecemos atribuição múltipla e o método <code class="docutils literal notranslate"><span class="pre">str.split()</span></code>
+refaça os dois exercícios anteriores usando essas técnicas.</p></li>
+<li><p>Use <em>slicing</em> (mais especificamente o passo do fatiamento) para inverter a
+string “Python”.</p></li>
+</ol>
+<div class="section" id="id1">
+<h3>Desafios<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h3>
+<ol class="arabic">
+<li><p>Por que o seguinte código retorna uma <em>string</em> vazia?</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;No alto da montanha havia uma rosa&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">texto</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">&#39;&#39;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;No alto da montanha havia uma rosa&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">texto</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">&#39;No alto da montanha havia uma ros</span>
+</pre></div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="teclado">
+<h2>Teclado<a class="headerlink" href="#teclado" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Leia um nome pelo teclado e imprima <code class="docutils literal notranslate"><span class="pre">&quot;Olá,</span> <span class="pre">&lt;nome</span> <span class="pre">lido&gt;!&quot;</span></code></p></li>
+<li><p>Leia outro nome pelo teclado e imprima:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;nome lido&gt; roubou pão na cassa <span class="k">do</span> &lt;nome2 lido&gt;!
+&lt;nome2 lido&gt; ficou triste e com fome,
+porque o bandejão estava fechado.
+</pre></div>
+</div>
+</li>
+<li><p>Leia uma frase pelo teclado e a imprima ao contrário.</p>
+<p>Por exemplo, se a frase for <code class="docutils literal notranslate"><span class="pre">&quot;Manjo</span> <span class="pre">muito</span> <span class="pre">de</span> <span class="pre">Python!&quot;</span></code>, a saída deverá
+ser <code class="docutils literal notranslate"><span class="pre">'!nohtyP</span> <span class="pre">ed</span> <span class="pre">otium</span> <span class="pre">ojnaM'</span></code>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="listas">
+<h2>Listas<a class="headerlink" href="#listas" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Crie uma lista com o nome das 3 pessoas mais próximas.</p></li>
+<li><p>Crie três listas, uma lista de cada coisa a seguir:</p>
+<ul class="simple">
+<li><p>frutas</p></li>
+<li><p>docinhos de festa (não se esqueça de brigadeiros!!)</p></li>
+<li><p>ingredientes de feijoada</p></li>
+</ul>
+<p>Lembre-se de salvá-las em alguma variável!</p>
+<ol class="loweralpha simple">
+<li><p>Agora crie uma lista que contém essas três listas.</p></li>
+</ol>
+<p>Nessa lista de listas (vou chamar de <em>listona</em>):</p>
+<ol class="loweralpha simple" start="2">
+<li><p>você consegue acessar o elemento <em>brigadeiro</em>?</p></li>
+<li><p>Adicione mais <em>brigadeiros</em> à segunda lista de listona. O que aconteceu
+com a lista de <em>docinhos de festa</em>?</p></li>
+<li><p>Adicione bebidas ao final da <em>listona</em>, mas sem criar uma lista!</p></li>
+</ol>
+</li>
+<li><p>Utilizando o <code class="docutils literal notranslate"><span class="pre">del</span></code>, remova todos os elementos da lista criada anteriormente
+até a lista ficar vazia.</p></li>
+<li><p>Faça uma lista de compras do mês, não se esqueça de comprar produtos de
+limpeza e sorvete!</p>
+<p>Agora “vá ao mercado” e delete apenas os produtos de limpeza da lista.</p>
+<p>Agora “vá à sorveteria” e se empanturre de sorvete e tire o sorvete da lista.</p>
+</li>
+<li><p>Dado uma lista de números, faça com que os números sejam ordenados e, em seguida, inverta a ordem da lista usando <em>slicing</em>.</p></li>
+</ol>
+</div>
+<div class="section" id="dicionarios">
+<h2>Dicionários<a class="headerlink" href="#dicionarios" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Faça um dicionário com as 5 pessoas mais perto de você, tendo o nome como chave e a cor da camisa que está usando como valor.</p></li>
+<li><p>Crie um dicionário vazio <code class="docutils literal notranslate"><span class="pre">semana</span> <span class="pre">=</span> <span class="pre">{}</span></code> e o complete com uma chave para cada dia da semana, tendo como seu valor uma lista com as aulas que você tem nesse dia (sábado e domingo recebem listas vazias, ou você tem aula?).</p></li>
+<li><p>Crie um dicionário vazio <code class="docutils literal notranslate"><span class="pre">filmes</span> <span class="pre">=</span> <span class="pre">{}</span></code>. Utilize o nome de um filme como chave. E, como valor, <em>outro</em> dicionário contendo o <code class="docutils literal notranslate"><span class="pre">vilão</span></code> e o <code class="docutils literal notranslate"><span class="pre">ano</span></code> em que o filme foi lançado. Preencha 5 filmes.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="estruturas-de-controle">
+<h2>Estruturas de Controle<a class="headerlink" href="#estruturas-de-controle" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Escreva um programa que, dados 2 números diferentes (a e b), encontre o menor
+deles.</p></li>
+<li><p>Para doar sangue é necessário <a class="footnote-reference brackets" href="#id3" id="id2">1</a>:</p>
+<ul class="simple">
+<li><p>Ter entre 16 e 69 anos.</p></li>
+<li><p>Pesar mais de 50 kg.</p></li>
+<li><p>Estar descansado (ter dormido pelo menos 6 horas nas últimas 24 horas).</p></li>
+</ul>
+<p>Faça um programa que pergunte a idade, o peso e quanto dormiu nas últimas
+24 h para uma pessoa e diga se ela pode doar sangue ou não.</p>
+</li>
+<li><p>Considere uma equação do segundo grau
+<span class="math notranslate nohighlight">\(f(x) = a \cdot x^2 + b \cdot x + c\)</span>.
+A partir dos coeficientes, determine se a equação possui duas raízes reais,
+uma, ou se não possui.</p>
+<p><strong>Dica:</strong> <span class="math notranslate nohighlight">\(\Delta = b^2 - 4 \cdot a \cdot c\)</span> : se delta é maior que 0,
+possui duas raízes reais; se delta é 0, possui uma raiz; caso delta seja
+menor que 0, não possui raiz real</p>
+</li>
+<li><p>Leia dois números e efetue a adição. Caso o valor somado seja maior que 20,
+este deverá ser apresentado somando-se a ele mais 8; caso o valor somado seja
+menor ou igual a 20, este deverá ser apresentado subtraindo-se 5.</p></li>
+<li><p>Leia um número e imprima a raiz quadrada do número caso ele seja positivo ou
+igual a zero e o quadrado do número caso ele seja negativo.</p></li>
+<li><p>Leia um número inteiro entre 1 e 12 e escreva o mês correspondente. Caso o
+usuário digite um número fora desse intervalo, deverá aparecer uma mensagem
+informando que não existe mês com este número.</p></li>
+</ol>
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>Para mais informações sobre doação de sangue, acesse
+<a class="reference external" href="http://www.prosangue.sp.gov.br/artigos/requisitos_basicos_para_doacao.html">http://www.prosangue.sp.gov.br/artigos/requisitos_basicos_para_doacao.html</a></p>
+</dd>
+</dl>
+<div class="section" id="id4">
+<h3>Desafios<a class="headerlink" href="#id4" title="Link permanente para este título">¶</a></h3>
+<ol class="arabic">
+<li><p>Escreva um programa que, dados 3 números diferentes (a, b e c), encontre o
+menor deles.</p></li>
+<li><p>Dado 3 valores inteiros lidos do teclado: A, B e C, retorne a soma deles.
+Porém, caso algum desses valores seja 13, então ele não conta para a soma, e
+os valores a sua direita também não.</p>
+<dl>
+<dt>Por exemplo:</dt><dd><div class="line-block">
+<div class="line">1, 2, 3 -&gt; 6</div>
+<div class="line">1, 2, 13 -&gt; 3</div>
+<div class="line">1, 13, 3 -&gt; 1</div>
+<div class="line">13, 2, 3 -&gt; 0</div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="estruturas-de-repeticao">
+<h2>Estruturas de repetição<a class="headerlink" href="#estruturas-de-repeticao" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Calcule a tabuada do 13.</p></li>
+<li><p>Ler do teclado uma lista com 5 inteiros e imprimir o menor valor.</p></li>
+<li><p>Ler do teclado uma lista com 5 inteiros e imprimir <code class="docutils literal notranslate"><span class="pre">True</span></code> se a lista
+estiver ordenada de forma crescente ou False caso contrário.</p></li>
+<li><p>Exiba em ordem decrescente todos os números de 500 até 10.</p></li>
+<li><p>Ler do teclado 10 números e imprima a quantidade de números entre 10 e 50.</p></li>
+<li><p>Ler do teclado a idade e o sexo de 10 pessoas, calcule e imprima:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>idade média das mulheres</p></li>
+<li><p>idade média dos homens</p></li>
+<li><p>idade média do grupo</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Calcule o somatório dos números de 1 a 100 e imprima o resultado.</p></li>
+</ol>
+</div>
+<div class="section" id="funcoes">
+<h2>Funções<a class="headerlink" href="#funcoes" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Faça uma função que determina se um número é par ou ímpar. Use o <code class="docutils literal notranslate"><span class="pre">%</span></code> para
+determinar o resto de uma divisão. Por exemplo: <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">%</span> <span class="pre">2</span> <span class="pre">=</span> <span class="pre">1</span></code> e <code class="docutils literal notranslate"><span class="pre">4</span> <span class="pre">%</span> <span class="pre">2</span> <span class="pre">=</span> <span class="pre">0</span></code></p></li>
+<li><p>Faça uma função que calcule a área de um círculo. Insira o raio como
+argumento.</p>
+<p><strong>Dica:</strong> faça a importação de <code class="docutils literal notranslate"><span class="pre">math</span></code> e use <span class="math notranslate nohighlight">\(\pi\)</span> de lá.</p>
+<div class="math notranslate nohighlight">
+\[A = \pi R^2\]</div>
+</li>
+<li><p>Crie uma função que receba um valor de temperatura em Fahrenheit e transforme
+em Celsius.</p>
+<p>Relembrar é viver:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\frac{C}{5} = \frac{F - 32}{9}\]</div>
+</div></blockquote>
+</li>
+<li><p>Utilizando a função anterior, faça a impressão da temperatura, em graus Celsius, de 0 °C  a 100 °C, e todos os valores correspondentes em Fahrenheit.</p></li>
+<li><p>Alanderson quer saber se um endereço IP é válido. Faça um programa para
+ajudar Alanderson a testar se um endereço é válido.</p>
+<p>Para isso, a entrada deve ser um endereço IP (digitado pelo usuário) e o
+programa deve escrever na tela se é válido ou não. Um endereço IPv4 é
+composto por 4 números inteiros entre 0 e 255, separados por um ponto.</p>
+<p>Por exemplo, o endereço <code class="docutils literal notranslate"><span class="pre">123.123.123.123</span></code> é válido, mas <code class="docutils literal notranslate"><span class="pre">666.123.k.3</span></code>
+não é.</p>
+</li>
+<li><p>Crie uma função que receba 3 valores e calcula as raízes da fórmula de
+Bhāskara.</p>
+<div class="math notranslate nohighlight">
+\[x = \frac{-b \pm \sqrt{b^2 - 4 \cdot a \cdot c}}{2 \cdot a}\]</div>
+<p><strong>Dica:</strong> raiz quadrada é <code class="docutils literal notranslate"><span class="pre">sqrt()</span></code>, importando <code class="docutils literal notranslate"><span class="pre">math</span></code>: <code class="docutils literal notranslate"><span class="pre">math.sqrt()</span></code></p>
+<p>Faça um teste com <code class="docutils literal notranslate"><span class="pre">bhaskara(1,</span> <span class="pre">-4,</span> <span class="pre">-5)</span></code> e o programa deve obter as raízes:
+(5.0, -1.0)</p>
+</li>
+<li><p>Dada a função: <span class="math notranslate nohighlight">\(y = 5x + 2\)</span>, determine os valores de <span class="math notranslate nohighlight">\(y\)</span> para
+<span class="math notranslate nohighlight">\(x\)</span> entre -10 a +10, onde <span class="math notranslate nohighlight">\(x\)</span> é inteiro</p></li>
+<li><p>Escreva uma função chamada <code class="docutils literal notranslate"><span class="pre">has_duplicates</span></code> que tome uma lista e retorne
+<code class="docutils literal notranslate"><span class="pre">True</span></code> se houver algum elemento que apareça mais de uma vez. Ela não deve
+modificar a lista original.</p></li>
+<li><p>Duas palavras são um “par inverso” se uma for o contrário da outra. Escreva
+uma função que dado duas palavras, retorne <code class="docutils literal notranslate"><span class="pre">True</span></code> caso sejam.</p></li>
+<li><p>Escreva uma função que imprime todos os números primos entre 1 e 50</p>
+<p><strong>Dica:</strong> um número é primo se ele for divisível apenas por 1 e ele mesmo,
+use o operador <code class="docutils literal notranslate"><span class="pre">%</span></code> (resto da divisão) para isso.</p>
+</li>
+<li><p>Duas palavras são anagramas se você puder soletrar uma rearranjando as letras
+da outra. Escreva uma função chamada <code class="docutils literal notranslate"><span class="pre">is_anagram</span></code> que tome duas strings e
+retorne <code class="docutils literal notranslate"><span class="pre">True</span></code> se forem anagramas ou False caso contrário.</p></li>
+<li><p>Escreva uma função que retorne uma lista com todas as chaves de um dicionário
+que contém um certo valor.</p>
+<p>Por exemplo, se o dicionário for
+<code class="docutils literal notranslate"><span class="pre">{'a':</span> <span class="pre">1,</span> <span class="pre">'b':</span> <span class="pre">2,</span> <span class="pre">'c':</span> <span class="pre">1,</span> <span class="pre">'d':</span> <span class="pre">4}</span></code>, a função deve retornar <code class="docutils literal notranslate"><span class="pre">['a',</span> <span class="pre">'c']</span></code>
+caso procure pelo valor <code class="docutils literal notranslate"><span class="pre">1</span></code>; <code class="docutils literal notranslate"><span class="pre">[]</span></code> caso procure pelo valor <code class="docutils literal notranslate"><span class="pre">666</span></code>.</p>
+</li>
+<li><p>Escreva uma função que dado um número, calcule o fatorial desse número.
+Por exemplo, fatorial de 5:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[5! = 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 120\]</div>
+</div></blockquote>
+</li>
+<li><p>Crie uma função que aproxima a função matemática seno, utilizando a seguinte
+equação:</p>
+<div class="math notranslate nohighlight">
+\[\sin(x) = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)!} x^{2n+1}\]</div>
+<p>Essa é a expansão em <em>Série de Taylor</em> da função. Note que esta é uma série
+infinita! A sua função deve truncar a série em algum momento, ou seja, sua
+função vai calcular uma aproximação para o seno de um ângulo:</p>
+<div class="math notranslate nohighlight">
+\[\sin(x) \approx \sum_{n=0}^{N} \frac{(-1)^n}{(2n+1)!} x^{2n+1} = \sum_{n=0}^{N} a_n = S_N\]</div>
+<p>Note que, quanto maior o valor de N, melhor é a aproximação. Mas isso tem um
+custo: maior vai ser o número de termos nessa série e consequentemente, maior
+o tempo de execução desse código.</p>
+<p>Uma possibilidade é estipular previamente uma <em>precisão</em> a ser atingida pelo
+código. Ou seja, definimos o desvio máximo <span class="math notranslate nohighlight">\(\epsilon\)</span> que nossa
+aproximação tem com relação ao valor exato! Isso é feito comparando dois termos
+consecutivos da série: se a diferença <span class="math notranslate nohighlight">\(\delta\)</span> entre eles (em valor
+absoluto!) for menor que <span class="math notranslate nohighlight">\(\epsilon\)</span>, atingimos a precisão desejada:</p>
+<div class="math notranslate nohighlight">
+\[\delta = | S_N - S_{N-1} |\]</div>
+<p>Implemente, então, uma função que receba como argumentos:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x\)</span>: o ângulo (em radianos!!).</p></li>
+<li><p><span class="math notranslate nohighlight">\(N_\mathrm{max}\)</span>: o número máximo de iterações.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\epsilon\)</span>: a precisão da aproximação.</p></li>
+</ul>
+<p>e calcule uma aproximação para <span class="math notranslate nohighlight">\(\sin(x)\)</span> usando duas condições de parada:
+número máximo de termos na série é <span class="math notranslate nohighlight">\(N_\mathrm{max}\)</span> <em>e</em> precisão
+<span class="math notranslate nohighlight">\(\epsilon\)</span>. Ou seja, sua aproximação terá no máximo <span class="math notranslate nohighlight">\(N_\mathrm{max}\)</span>
+termos, mas pode ter menos termos caso a precisão desejada seja atingida (
+<span class="math notranslate nohighlight">\(\delta &lt; \epsilon\)</span>).</p>
+</li>
+<li><p>Calcule <span class="math notranslate nohighlight">\(\pi\)</span> usando um método de Monte Carlo.</p>
+<p>Monte Carlo é uma classe de métodos para resolver problemas usando
+estatística. Aqui você vai implementar uma função usando um desses algoritmos
+para calcular o número <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
+<p>Dado um círculo de raio <span class="math notranslate nohighlight">\(R\)</span> dentro de um quadrado de lados <span class="math notranslate nohighlight">\(2R\)</span>,
+a razão entre a área do círculo para a área do quadrado é:</p>
+<div class="math notranslate nohighlight">
+\[\frac{A_\bigcirc}{A_\square} = \frac{\pi R^2}{4 R^2} = \frac{\pi}{4}\]</div>
+<p>Ou seja, se você escolher aleatoriamente um ponto dentro do quadrado, a
+probabilidade dele cair dentro do círculo é de <span class="math notranslate nohighlight">\(\pi / 4\)</span>. Se você
+escolher <span class="math notranslate nohighlight">\(N\)</span> pontos aleatórios dentro do quadrado, cerca de
+<span class="math notranslate nohighlight">\(N \pi / 4\)</span> estarão dentro do círculo.</p>
+<p>Então, basta escolher pontos aleatórios dentro do quadrado e ver se estão
+dentro do círculo</p>
+<p>Um ponto <span class="math notranslate nohighlight">\((x, y)\)</span> está dentro do círculo se
+<span class="math notranslate nohighlight">\(x^2 + y^2 \leq R^2\)</span>.</p>
+<p>Faça uma função que receba como argumento um número <span class="math notranslate nohighlight">\(N\)</span> de pontos
+<span class="math notranslate nohighlight">\((x, y)\)</span> (aleatórios) a serem sorteados. Dentro dessa função, você
+deve fazer um laço que sorteie esses <span class="math notranslate nohighlight">\(N\)</span> pontos e veja quantos estão
+dentro do círculo. Se <span class="math notranslate nohighlight">\(M\)</span> pontos caírem dentro do círculo, então a
+probabilidade de um ponto aleatório estar dentro do círculo é
+aproximadamente <span class="math notranslate nohighlight">\(M / N\)</span>. Então, podemos estimar <span class="math notranslate nohighlight">\(\pi\)</span> como:</p>
+<div class="math notranslate nohighlight">
+\[\pi \approx \frac{4 M}{N}\]</div>
+<p>Para sortear um número aleatório entre <span class="math notranslate nohighlight">\(a\)</span> e <span class="math notranslate nohighlight">\(b\)</span> utilize a
+função <cite>uniform(a, b)</cite> do módulo <cite>random</cite>. Exemplo:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">random</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># número aleatório entre 1 e 2</span>
+<span class="go">1.8740445361226983</span>
+</pre></div>
+</div>
+<p>Perceba que ao executar a função <code class="docutils literal notranslate"><span class="pre">pi()</span></code> várias vezes seguidas, o
+resultado é sempre diferente. Então faça um laço para calcular <code class="docutils literal notranslate"><span class="pre">pi()</span></code>
+<span class="math notranslate nohighlight">\(K\)</span> vezes, salve os resultados em uma lista e calcule o valor médio
+e o desvio padrão.</p>
+</li>
+<li><p>Tanto cadeias DNA quanto RNA são sequências de <em>nucleotídeos</em>. O DNA é
+formado por: adenina (<em>A</em>), citosina (<em>C</em>), guanina (<em>G</em>) e timina (<em>T</em>). E
+o RNA é formado por: adenina (<em>A</em>), citosina (<em>C</em>), guanina (<em>G</em>) e uracila
+(<em>U</em>).</p>
+<p>Dada uma cadeia de DNA, o RNA transcrito é formado substituindo um
+nucleotídeo pelo seu complemento:</p>
+<ul class="simple">
+<li><p>G -&gt; C</p></li>
+<li><p>C -&gt; G</p></li>
+<li><p>T -&gt; A</p></li>
+<li><p>A -&gt; U</p></li>
+</ul>
+<p>Implemente uma função que receba uma cadeia de DNA como <em>string</em> e retorne
+a o RNA complementar.</p>
+</li>
+<li><p>Implemente uma função que conte quantas vezes um certo nucleotídeo aparece
+em uma cadeia de DNA. Para isso, sua função deve receber uma <em>string</em>
+representando o DNA e outra representando o nucleotídeo. Caso aquele
+nucleotídeo ou o DNA não seja válido, retorne <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<p>Nesse exercício, considere como inválido se um nucleotídeo não for <code class="docutils literal notranslate"><span class="pre">A</span></code>,
+<code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">G</span></code> ou <code class="docutils literal notranslate"><span class="pre">T</span></code>.</p>
+</li>
+<li><p>O RNA é o responsável por levar as informações contidas no DNA para fora do núcleo da célula, para então ser feita a codificação para as bases púricas: <em>U</em>, <em>A</em>, <em>C</em> e <em>G</em>. Quando arranjadas em sequência de trincas (chamadas <em>códons</em>), formam um <em>polipeptídeo</em>, cadeia de aminoácido. O final de uma cadeia é determinado por um dos seguintes códons: <code class="docutils literal notranslate"><span class="pre">UGA</span></code>, <code class="docutils literal notranslate"><span class="pre">UAA</span></code> ou <code class="docutils literal notranslate"><span class="pre">UAG</span></code>.</p>
+<p>A tabela a seguir mostra alguns códons e qual aminoácido codifica:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 57%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Códon RNA</p></th>
+<th class="head"><p>Aminoácido</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>UAU</p></td>
+<td><p>Ile</p></td>
+</tr>
+<tr class="row-odd"><td><p>UGU</p></td>
+<td><p>Thr</p></td>
+</tr>
+<tr class="row-even"><td><p>UUG</p></td>
+<td><p>Asn</p></td>
+</tr>
+<tr class="row-odd"><td><p>UCG</p></td>
+<td><p>Ser</p></td>
+</tr>
+<tr class="row-even"><td><p>GUG</p></td>
+<td><p>His</p></td>
+</tr>
+<tr class="row-odd"><td><p>GCU</p></td>
+<td><p>Arg</p></td>
+</tr>
+<tr class="row-even"><td><p>CAU</p></td>
+<td><p>Val</p></td>
+</tr>
+</tbody>
+</table>
+<p>Por exemplo:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span>                   <span class="n">TATTCGCATTGA</span>
+         <span class="n">DNA</span>   <span class="o">-&gt;</span>  <span class="o">||||||||||||</span>
+                   <span class="n">ATAAGCGTAACT</span>
+
+         <span class="n">RNA</span>   <span class="o">-&gt;</span>  <span class="n">UAUUCGCAUUGA</span>
+
+  <span class="n">Códons</span> <span class="n">RNA</span>   <span class="o">-&gt;</span>  <span class="n">UAU</span> <span class="n">UCG</span> <span class="n">CAU</span> <span class="n">UGA</span>
+
+<span class="n">Polipeptídeo</span>   <span class="o">-&gt;</span>  <span class="n">Ile</span><span class="o">-</span><span class="n">Ser</span><span class="o">-</span><span class="n">Val</span>
+</pre></div>
+</div>
+<p>Faça uma função cuja entrada seja uma string com tamanho múltiplo de 3 que representa o RNA. A saída deverá ser uma string com o nome de cada aminoácido separado por hífen, que representa o polipeptídeo.</p>
+<p><strong>Dica:</strong> faça um dicionário para trocar os códons por aminoácidos.</p>
+<p><strong>Dica2:</strong> faça uma lista para facilitar a saída.</p>
+<p>Exemplos de entradas e saídas:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">polipeptideo</span><span class="p">(</span><span class="s2">&quot;UAUGCUCAUCAUUAUUCGUAG&quot;</span><span class="p">)</span>
+<span class="go">&quot;Ile-Arg-Val-Val-Ile-Ser&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">polipeptideo</span><span class="p">(</span><span class="s2">&quot;GCUUAUUCGCAUGCUUCGGCUGCUUAG&quot;</span><span class="p">)</span>
+<span class="go">&quot;Arg-Ile-Ser-Val-Arg-Ser-Arg-Arg&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">polipeptideo</span><span class="p">(</span><span class="s2">&quot;CAUUCGGUGGCUUCGGUGUGUCAUUCGCAUUAG&quot;</span><span class="p">)</span>
+<span class="go">&quot;Val-Ser-His-Arg-Ser-His-Thr-Val-Ser-Val&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">polipeptideo</span><span class="p">(</span><span class="s2">&quot;GCUCAUUGUUGUUUGCAUUGUGUGGCUGUGCAUUUGUAG&quot;</span><span class="p">)</span>
+<span class="go">&quot;Arg-Val-Thr-Thr-Asn-Val-Thr-His-Arg-His-Val-Asn&quot;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="contribuidores.html" class="btn btn-neutral float-right" title="Contribuidores" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="funcoes.html" class="btn btn-neutral float-left" title="Funções" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2020, (CC BY-NC-SA 4.0) Grupy-Sanca
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Estruturas de controle &mdash; Curso Introdutório de Python | Grupy-Sanca</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+    <link rel="next" title="Estruturas de repetição" href="repeticao.html" />
+    <link rel="prev" title="Condicionais" href="condicionais.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Curso Introdutório de Python
+          
+
+          
+            
+            <img src="_static/logo_small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introducao.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sobre_grupy.html">Sobre o grupy-sanca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacao.html">Guia de Instalação do Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instalacao.html#ambientes-de-desenvolvimento">Ambientes de Desenvolvimento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hello_world.html">Hello World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculadora.html">Python como calculadora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variaveis.html">Variáveis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html"><cite>Strings</cite> (sequência de caracteres)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Lendo valores do teclado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listas.html">Listas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dicionarios.html">Dicionários</a></li>
+<li class="toctree-l1"><a class="reference internal" href="condicionais.html">Condicionais</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Estruturas de controle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#exercicios">Exercícios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="repeticao.html">Estruturas de repetição</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funcoes.html">Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercicios.html">Exercícios e Desafios!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribuidores.html">Contribuidores</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso Introdutório de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Estruturas de controle</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/controle.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="estruturas-de-controle">
+<h1>Estruturas de controle<a class="headerlink" href="#estruturas-de-controle" title="Link permanente para este título">¶</a></h1>
+<p>As estruturas de controle servem para decidir quais blocos de código serão
+executados.</p>
+<dl>
+<dt>Exemplo:</dt><dd><div class="line-block">
+<div class="line">Se estiver nublado:</div>
+<div class="line-block">
+<div class="line">Levarei guarda-chuva</div>
+</div>
+<div class="line">Senão:</div>
+<div class="line-block">
+<div class="line">Não levarei</div>
+</div>
+</div>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Na linguagem Python, a indentação (espaço dado antes de uma linha) é
+utilizada para demarcar os blocos de código, e são obrigatórios quando
+se usa estruturas de controle.</p>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;estou no if&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cai no else&quot;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">estou no if</span>
+</pre></div>
+</div>
+<p>Também é possível checar mais de uma condição com o <code class="docutils literal notranslate"><span class="pre">elif</span></code>. É a abreviatura
+para <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code>. Ou seja, se o <code class="docutils literal notranslate"><span class="pre">if</span></code> for falso, testa outra condição antes do
+<code class="docutils literal notranslate"><span class="pre">else</span></code>:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">valor_entrada</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">valor_entrada</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a entrada era 1&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">elif</span> <span class="n">valor_entrada</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a entrada era 2&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">elif</span> <span class="n">valor_entrada</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a entrada era 3&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">elif</span> <span class="n">valor_entrada</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a entrada era 4&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;o valor de entrada não era esperado em nenhum if&quot;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">o valor de entrada não era esperado em nenhum if</span>
+</pre></div>
+</div>
+<p>Note que quando uma condição for verdadeira, aquele bloco de código é executado
+e as demais condições (<code class="docutils literal notranslate"><span class="pre">elif</span></code> e <code class="docutils literal notranslate"><span class="pre">else</span></code>) são puladas:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;é 1&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">elif</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;é maior ou igual a 1&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;é qualquer outra coisa&quot;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">é 1</span>
+</pre></div>
+</div>
+<div class="section" id="exercicios">
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Escreva um programa que, dados 2 números diferentes (a e b), encontre o menor
+deles.</p></li>
+<li><p>Para doar sangue é necessário <a class="footnote-reference brackets" href="#id2" id="id1">1</a>:</p>
+<ul class="simple">
+<li><p>Ter entre 16 e 69 anos.</p></li>
+<li><p>Pesar mais de 50 kg.</p></li>
+<li><p>Estar descansado (ter dormido pelo menos 6 horas nas últimas 24 horas).</p></li>
+</ul>
+<p>Faça um programa que pergunte a idade, o peso e quanto dormiu nas últimas
+24 h para uma pessoa e diga se ela pode doar sangue ou não.</p>
+</li>
+<li><p>Considere uma equação do segundo grau
+<span class="math notranslate nohighlight">\(f(x) = a \cdot x^2 + b \cdot x + c\)</span>.
+A partir dos coeficientes, determine se a equação possui duas raízes reais,
+uma, ou se não possui.</p>
+<p><strong>Dica:</strong> <span class="math notranslate nohighlight">\(\Delta = b^2 - 4 \cdot a \cdot c\)</span> : se delta é maior que 0,
+possui duas raízes reais; se delta é 0, possui uma raiz; caso delta seja
+menor que 0, não possui raiz real</p>
+</li>
+<li><p>Leia dois números e efetue a adição. Caso o valor somado seja maior que 20,
+este deverá ser apresentado somando-se a ele mais 8; caso o valor somado seja
+menor ou igual a 20, este deverá ser apresentado subtraindo-se 5.</p></li>
+<li><p>Leia um número e imprima a raiz quadrada do número caso ele seja positivo ou
+igual a zero e o quadrado do número caso ele seja negativo.</p></li>
+<li><p>Leia um número inteiro entre 1 e 12 e escreva o mês correspondente. Caso o
+usuário digite um número fora desse intervalo, deverá aparecer uma mensagem
+informando que não existe mês com este número.</p></li>
+</ol>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Para mais informações sobre doação de sangue, acesse
+<a class="reference external" href="http://www.prosangue.sp.gov.br/artigos/requisitos_basicos_para_doacao.html">http://www.prosangue.sp.gov.br/artigos/requisitos_basicos_para_doacao.html</a></p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="repeticao.html" class="btn btn-neutral float-right" title="Estruturas de repetição" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="condicionais.html" class="btn btn-neutral float-left" title="Condicionais" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2020, (CC BY-NC-SA 4.0) Grupy-Sanca
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
